@@ -1,113 +1,38 @@
-import Image from 'next/image'
+import Image from "next/image";
+import Hero from "./Hero";
 
 export default function Home() {
+  //const heroHTML = `<section className="flex w-full h-[100vh] pt-28 box-border justify-center relative gap-0"> <svg width="0" height="0"> <defs> <clipPath id="clip-path" clipPathUnits="objectBoundingBox" transform="scale(0.0046728971962617,0.0035460992907801)" > <path className="cls-1" d="M201.21,84.41h-28.02c-7.15,0-12.95-5.8-12.95-12.95v-18.85c0-7.34-5.95-13.29-13.29-13.29h-28.07c-7.05,0-12.77-5.72-12.77-12.77v-12.77c0-7.34-5.95-13.29-13.29-13.29H13.79C6.45.5.5,6.45.5,13.79v255.42c0,7.34,5.95,13.29,13.29,13.29h187.42c7.34,0,13.29-5.95,13.29-13.29V97.7c0-7.34-5.95-13.29-13.29-13.29Z" /> </clipPath> </defs> </svg> <div className="w-80 flex-1 card rounded-3xl mt-4 bottom-3 relative flex flex-col card-wave right-10 ml-10" style={{ clipPath: "url(#clip-path)" }} > <h1 className="text-[5.3rem] leading-[1.05em] text-white mt-5 ml-9"> Web <br /> Design + <br /> Developers <br /> </h1> <ul className="ml-9 text-4xl mt-10 text-white font-light"> <li>- Web Design</li> <li>- Web Development</li> <li>- SEO</li> <li>- Branding</li> </ul> <Image src={"/images/prism.png"} width={650} height={650} className="absolute -bottom-[9rem] -left-[6rem] -z-10 opacity-90 h-[100%] min-w-[100%] object-cover" /> </div> <div className="flex flex-col flex-nowrap flex-1"> <div className="flex flex-col w-min items-end h-min"> <h1 className="text-[12.25rem] text-white leading-none tracking-[.15em] absolute -right-[.15em]"> MANASA </h1> <h1 className="text-[12.25rem] text-white leading-none tracking-wide w-min h-min mt-48"> STUDIOS </h1> </div> <div className="flex gap-8 flex-1 relative bottom-3"> <div className="card flex-auto w-[9rem] rounded-3xl overflow-clip"> <div className="absolute flex-1 w-full h-full top-0 left-0 p-8 text-white rounded-3xl "> <h2 className="text-3xl"> Crafting Digital <br /> Experiences </h2> <p className="text-md font-light"> Bespoke web design and development that breathes life into your brand. </p> <Image src={"/images/blobsRot.png"} width={650} height={650} className="absolute -top-0 -right-20 -z-10 opacity-90 h-[100%] object-cover" /> </div> </div> <div className="card flex-auto rounded-3xl overflow-clip"> <div className="absolute flex-1 w-full h-full top-0 left-0 p-8 text-white rounded-3xl "> <h2 className="text-3xl"> Let's Build <br /> Together </h2> <p className="text-md font-light"> Start your journey with us today and elvate your digital presence </p> <Image src={"/images/purpleWave.png"} width={450} height={450} className="absolute -top-0 -right-0 -z-10 opacity-90 h-[100%] object-cover" /> </div> </div> </div> </div> </section>`;
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="w-screen px-8 absolute top-0">
+      <Hero />
+      <section className="pt-40 px-4 relative">
+        <div className="text-white">
+          <h1 className="text-8xl mb-10">
+            Transforming the <br />
+            Digital Landscape
+          </h1>
+          <p className="text-md font-thin w-[40%]">
+            At Manasa Studios, we're not just building websites; we're sculpting
+            the digital future. "Transforming The Digital Landscape" is our
+            commitment to innovation and excellence in the digital realm. Our
+            team of visionary designers and developers is dedicated to crafting
+            online experiences that resonate and engage. With every line of code
+            and pixel-perfect design, we aim to push the boundaries of what's
+            possible, setting new standards for digital presence and
+            connectivity. Join us on a journey where your brand's story is
+            amplified in the vast digital expanse, ensuring that every
+            interaction is meaningful and every user experience is
+            unforgettable.
+          </p>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src={"/images/landscape.png"}
+          width={1200}
+          height={1200}
+          className="absolute top-[21%] -right-72 -z-10"
         />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </section>
     </main>
-  )
+  );
 }
