@@ -161,7 +161,7 @@ export default function Hero() {
           >
             <div className="absolute flex-1 w-full h-full top-0 left-0  p-8 text-white rounded-3xl ">
               <h2 className="text-3xl">
-                Let's Build <br />
+                Let&apos;s Build <br />
                 Together
               </h2>
               <p className="text-md font-light">

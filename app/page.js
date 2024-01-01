@@ -13,17 +13,17 @@ export default function Home() {
             Digital Landscape
           </h1>
           <p className="text-md font-thin w-[40%]">
-            At Manasa Studios, we're not just building websites; we're sculpting
-            the digital future. "Transforming The Digital Landscape" is our
-            commitment to innovation and excellence in the digital realm. Our
-            team of visionary designers and developers is dedicated to crafting
-            online experiences that resonate and engage. With every line of code
-            and pixel-perfect design, we aim to push the boundaries of what's
-            possible, setting new standards for digital presence and
-            connectivity. Join us on a journey where your brand's story is
-            amplified in the vast digital expanse, ensuring that every
-            interaction is meaningful and every user experience is
-            unforgettable.
+            At Manasa Studios, we&apos;re not just building websites; we&apos;re
+            sculpting the digital future. &quot;Transforming The Digital
+            Landscape&quot; is our commitment to innovation and excellence in
+            the digital realm. Our team of visionary designers and developers is
+            dedicated to crafting online experiences that resonate and engage.
+            With every line of code and pixel-perfect design, we aim to push the
+            boundaries of what&apos;s possible, setting new standards for
+            digital presence and connectivity. Join us on a journey where your
+            brand&apos;s story is amplified in the vast digital expanse,
+            ensuring that every interaction is meaningful and every user
+            experience is unforgettable.
           </p>
         </div>
         <Image
