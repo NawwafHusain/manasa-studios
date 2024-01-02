@@ -56,7 +56,7 @@ export default function Nav() {
   return (
     <>
       <div
-        className="top-0 left-0 w-screen p-10 h-28 z-10 sticky flex justify-center items-center"
+        className="top-0 left-0 w-screen p-10 h-28 z-10 sticky flex justify-center items-center overflow-x-clip"
         ref={root}
       >
         <div
