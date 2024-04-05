@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -11,17 +11,21 @@ export default function Nav() {
   const navTwoRef = useRef();
   const triggerRef = useRef();
   const root = useRef();
+  const [isOpened, setIsOpened] = useState(false);
 
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(
     () => {
+      const isMobile = window.innerWidth <= 768; // assuming 768px is your mobile breakpoint
+
       gsap.to(navRef.current, {
         y: 0,
         duration: 1,
-        delay: 0.75,
+        delay: 0.5,
         opacity: 1,
       });
+
       gsap.to(navRef.current, {
         scrollTrigger: {
           trigger: triggerRef.current,
@@ -34,7 +38,7 @@ export default function Nav() {
           ease: "power1.inOut",
         },
         backdropFilter: "blur(100px)",
-        width: "50%",
+        width: isMobile ? "100%" : "50%",
       });
       gsap.to(navTwoRef.current, {
         scrollTrigger: {
@@ -53,18 +57,95 @@ export default function Nav() {
     { scope: root }
   );
 
+  const listAnimation = () => {
+    gsap.from(".list-item", {
+      stagger: 0.1,
+      opacity: 0,
+      y: 100,
+      delay: 0.5,
+    });
+  };
+
+  useEffect(() => {
+    isOpened ? listAnimation() : null;
+  }, [isOpened]);
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      setIsOpened(false);
+    }
+  };
+
   return (
     <>
       <div
-        className="top-0 left-0 w-screen p-10 h-28 z-10 sticky flex justify-center items-center overflow-x-clip"
+        className={`top-0 left-0 w-screen lg:p-8 p-4 h-28   min-h-28 z-10 sticky flex justify-center items-center overflow-x-clip`}
         ref={root}
       >
         <div
-          className="w-full h-20 rounded-full nav flex justify-between items-center px-10 sticky z-60"
+          className={`w-full lg:h-20 h-full rounded-[3rem] nav flex justify-between  items-center
+           px-10 sticky z-60 transition-all duration-500 `}
           ref={navRef}
         >
           <div
-            className="nav2 absolute top-0 left-0 rounded-full h-full w-full flex justify-between items-center px-10  "
+            className={`w-full ${
+              isOpened ? "h-[97vh] bg-white" : "h-0 bg-transparent"
+            } absolute top-0 left-0 px-4 rounded-[2rem] transition-all duration-500 z-20 overflow-clip flex flex-col justify-between`}
+          >
+            <div
+              className={`w-full h-20 rounded-[3rem]  flex justify-between  items-center
+           px-6 z-60 transition-all duration-500 `}
+              ref={navRef}
+            >
+              <Image
+                src="/images/LogoBlack.png"
+                width={80}
+                height={66}
+                className="object-contain"
+                alt="Manasa Studios Logo white version"
+              />
+              <Image
+                src="/images/close.png"
+                width={40}
+                height={40}
+                className="object-contain lg:hidden"
+                onClick={() => setIsOpened(!isOpened)}
+                alt="Manasa Studios Logo white version"
+              />
+            </div>
+            <ul
+              className={`flex flex-col justify-center items-center gap-4 text-3xl font-bold flex-1 `}
+            >
+              <li
+                className=" list-item"
+                onClick={() => scrollToSection("services")}
+              >
+                Services
+              </li>
+              <li
+                className=" list-item"
+                onClick={() => scrollToSection("projects")}
+              >
+                Projects
+              </li>
+              <li
+                className=" list-item"
+                onClick={() => scrollToSection("methadology")}
+              >
+                Methadology
+              </li>
+              <li
+                className=" list-item"
+                onClick={() => scrollToSection("contact")}
+              >
+                Contact
+              </li>
+            </ul>
+          </div>
+          <div
+            className={`nav2 absolute top-0 left-0 rounded-[3rem] h-full w-full flex justify-between lg:items-center px-10 items-center `}
             ref={navTwoRef}
           >
             <Image
@@ -74,17 +155,38 @@ export default function Nav() {
               className="object-contain"
               alt="Manasa Studios Logo white version"
             />
-            <ul className="flex gap-2">
-              <li className=" nav-button2 rounded-full flex justify-center items-center">
+            <Image
+              src="/images/hamburger.png"
+              width={40}
+              height={40}
+              className="object-contain lg:hidden"
+              onClick={() => setIsOpened(!isOpened)}
+              alt="Manasa Studios Logo white version"
+            />
+
+            <ul className="lg:flex gap-2 hidden">
+              <li
+                className=" nav-button2 rounded-full flex justify-center items-center"
+                onClick={() => scrollToSection("services")}
+              >
                 Services
               </li>
-              <li className=" nav-button2 rounded-full flex justify-center items-center">
+              <li
+                className=" nav-button2 rounded-full flex justify-center items-center"
+                onClick={() => scrollToSection("projects")}
+              >
                 Projects
               </li>
-              <li className=" nav-button2 rounded-full flex justify-center items-center">
+              <li
+                className=" nav-button2 rounded-full flex justify-center items-center"
+                onClick={() => scrollToSection("methadology")}
+              >
                 Methadology
               </li>
-              <li className=" nav-button2 rounded-full flex justify-center items-center">
+              <li
+                className=" nav-button2 rounded-full flex justify-center items-center"
+                onClick={() => scrollToSection("contact")}
+              >
                 Contact
               </li>
             </ul>
@@ -96,17 +198,36 @@ export default function Nav() {
             className="object-contain"
             alt="Manasa Studios Logo white version"
           />
-          <ul className="flex gap-2">
-            <li className=" nav-button rounded-full flex justify-center items-center">
+          <Image
+            src="/images/hamburgerWhite.png"
+            width={40}
+            height={40}
+            className="object-contain lg:hidden"
+            alt="Manasa Studios Logo white version "
+          />
+          <ul className="lg:flex gap-2 hidden">
+            <li
+              className=" nav-button rounded-full flex justify-center items-center"
+              onClick={() => scrollToSection("services")}
+            >
               Services
             </li>
-            <li className=" nav-button rounded-full flex justify-center items-center">
+            <li
+              className=" nav-button rounded-full flex justify-center items-center"
+              onClick={() => scrollToSection("projects")}
+            >
               Projects
             </li>
-            <li className=" nav-button rounded-full flex justify-center items-center">
+            <li
+              className=" nav-button rounded-full flex justify-center items-center"
+              onClick={() => scrollToSection("methadology")}
+            >
               Methadology
             </li>
-            <li className=" nav-button rounded-full flex justify-center items-center">
+            <li
+              className=" nav-button rounded-full flex justify-center items-center"
+              onClick={() => scrollToSection("contact")}
+            >
               Contact
             </li>
           </ul>

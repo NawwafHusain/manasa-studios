@@ -16,27 +16,17 @@ export default function Hero() {
 
   useGSAP(
     () => {
-      const tween1 = () => {
-        gsap.to(card.current, {
-          scrollTrigger: {
-            trigger: root.current,
-            start: "100% 40%",
-            end: "top 0%",
-            //scrub: true,
-            duration: 1.5,
-            //markers: true,
-            toggleActions: "play none none reverse",
-          },
-          duration: 0.5,
-          stagger: 0.1,
-          y: 100,
-          ease: "power4.out",
-          delay: 0,
-          opacity: 0,
-        });
-      };
+      const isMobile = window.innerWidth <= 768; // assuming 768px is your mobile breakpoint
 
       gsap.to(title.current, {
+        scrollTrigger: {
+          trigger: root.current,
+          start: "top 20%",
+          end: "100% 50%",
+
+          //markers: true,
+          toggleActions: "play reverse play reverse",
+        },
         duration: 1,
         stagger: 0.1,
         x: 0,
@@ -44,16 +34,25 @@ export default function Hero() {
         delay: 0,
         opacity: 1,
         marginLeft: 0,
+        touchAction: "play reverse play reverse",
       });
 
       gsap.to(card.current, {
+        scrollTrigger: {
+          trigger: root.current,
+          start: "top 20%",
+          end: "100% 60%",
+
+          //markers: true,
+          toggleActions: "play reverse play reverse",
+        },
         duration: 1,
         stagger: 0.1,
         y: 0,
         ease: "power4.out",
-        delay: 0,
+        delay: isMobile ? 1 : 0,
         opacity: 1,
-        onComplete: tween1,
+        touchAction: "play reverse play reverse",
       });
 
       //title sharing ref with the rest
@@ -63,8 +62,9 @@ export default function Hero() {
 
   return (
     <section
-      className="flex w-full lg:h-[100vh] h-[70vh] pt-28 lg:box-border justify-center relative lg:gap-0 gap-4 lg:px-0 "
+      className="flex w-full lg:h-[100vh] h-[100vh] pt-28 lg:box-border justify-center relative lg:gap-0 gap-4 lg:px-0 lg:items-stretch right-2"
       ref={root}
+      id="hero"
     >
       <svg width="0" height="0">
         <defs>
@@ -80,21 +80,21 @@ export default function Hero() {
           </clipPath>
         </defs>
       </svg>
-      {/* wigglyt div */}
+      {/* wigglyt div desktop */}
       <div
-        className="lg:w-80 w-40 flex-1 card rounded-3xl mt-4 bottom-3 relative flex flex-col card-wave lg:right-10 lg:ml-10 lg:translate-x-[0]"
+        className="lg:w-80 w-40  flex-1 card rounded-3xl mt-4 bottom-3 relative lg:flex flex-col card-wave lg:right-10 lg:ml-10 translate-x-[0%]  hidden"
         ref={(e) => {
           card.current[0] = e;
         }}
         style={{ clipPath: "url(#clip-path)" }}
       >
-        <h1 className="lg:text-[4.7rem]  text-xl lg:leading-[1.17em] leading-[2.5em] text-white mt-5 lg:ml-9 ml-4">
+        <h1 className="lg:text-[4.7rem]  text-xl lg:leading-[1.19em] leading-[2.5em] text-white mt-5 lg:ml-9 ml-4  ">
           Web <br />
           Design + <br />
           Developement
           <br />
         </h1>
-        <ul className="lg:ml-9 ml-4 lg:text-4xl text-md  mt-10 text-white font-light">
+        <ul className="lg:ml-9 ml-4 lg:text-4xl text-md  mt-10 text-white font-light xxl:text-black">
           <li>- Web Design</li>
           <li className="w-[90%] lg:w-auto">- Web Development</li>
           <li>- SEO</li>
@@ -111,10 +111,10 @@ export default function Hero() {
 
       {/*right side of screen */}
       <Suspense fallback={<MainTitle />}></Suspense>
-      <div className="flex flex-col flex-nowrap lg:flex-1 lg:w-auto w-[50%]">
-        <div className="flex flex-col w-min items-end h-min">
+      <div className="flex flex-col flex-nowrap lg:flex-1 lg:w-auto w-full ">
+        <div className="flex flex-col lg:w-min lg:items-end h-min text-center">
           <h1
-            className="lg:text-[12.25rem]  text-[3rem] text-white leading-none tracking-[.15em] absolute lg:-right-[.15em] -right-[.5em] lg:translate-x-[100%] translate-x-[110%] lg:ml-0   opcaity-0"
+            className="lg:text-[12.25rem]  text-[5rem] text-white leading-none lg:tracking-[.15em] xl:tracking-[.18em] xl:-translate-y-4 lg:absolute lg:-right-[.15em]  translate-x-[100%] lg:ml-0 opacity-0"
             ref={(e) => {
               title.current[0] = e;
             }}
@@ -122,7 +122,7 @@ export default function Hero() {
             MANASA
           </h1>
           <h1
-            className="lg:text-[12.25rem] text-[3rem] text-white leading-none tracking-wide w-min h-min lg:mt-48 lg:mr-0 mr-48 mt-16 translate-x-[100%] ml-10 opcaity-0"
+            className="lg:text-[12.25rem] text-[5rem] text-white leading-none lg:tracking-wide lg:w-min lg:h-min lg:mt-36 lg:mr-0  translate-x-[100%]  opacity-0"
             ref={(e) => {
               title.current[1] = e;
             }}
@@ -131,11 +131,38 @@ export default function Hero() {
           </h1>
         </div>
 
-        <div className="flex gap-8 flex-1 relative bottom-3 lg:flex-row flex-col mt-5 lg:mt-0">
+        <div className="lg:flex gap-8 flex-1 relative bottom-3 lg:flex-row flex-col mt-5 lg:mt-2 flex ">
+          {/*mobile wiggly div */}
+          <div
+            className="card flex-auto lg:w-[9rem] rounded-3xl overflow-clip lg:hidden "
+            ref={(e) => {
+              card.current[1] = e;
+            }}
+          >
+            <div className="absolute flex-1 w-full h-full top-0 left-0 p-4 lg:p-8 text-white rounded-3xl ">
+              <h2 className="lg:text-3xl text-xl">
+                Web <br />
+                Design + <br />
+                Developement
+                <br />
+              </h2>
+              <p className="text-[0.8rem] lg:text-md font-light">
+                Bespoke web design and development that breathes life into your
+                brand.
+              </p>
+              <Image
+                src={"/images/prism.png"}
+                width={650}
+                height={650}
+                className="absolute -top-0 -left-20 -z-10 lg:opacity-90 opacity-60  h-[100%]    object-cover"
+                alt="blobs Background"
+              />
+            </div>
+          </div>
           <div
             className="card flex-auto lg:w-[9rem] rounded-3xl overflow-clip "
             ref={(e) => {
-              card.current[1] = e;
+              card.current[2] = e;
             }}
           >
             <div className="absolute flex-1 w-full h-full top-0 left-0 p-4 lg:p-8 text-white rounded-3xl ">
@@ -156,11 +183,10 @@ export default function Hero() {
               />
             </div>
           </div>
-
           <div
             className="card flex-auto  rounded-3xl overflow-clip "
             ref={(e) => {
-              card.current[2] = e;
+              card.current[3] = e;
             }}
           >
             <div className="absolute flex-1 w-full h-full top-0 left-0 p-4 lg:p-8 text-white rounded-3xl ">
