@@ -2,6 +2,7 @@
 import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/nav";
+import { Toaster } from "react-hot-toast";
 
 const josefin_Sans = Josefin_Sans({ subsets: ["latin"] });
 
@@ -16,6 +17,17 @@ export default function RootLayout({ children }) {
       <body
         className={`${josefin_Sans.className} relative lg:h-[700vh] h-[900vh] overflow-x-clip`}
       >
+        <Toaster
+          position="top-center"
+          toastOptions={{
+            className: "",
+            style: {
+              border: "1px solid black",
+              padding: "16px",
+              color: "black",
+            },
+          }}
+        />
         <Nav />
         {children}
       </body>

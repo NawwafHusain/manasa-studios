@@ -17,7 +17,7 @@ export default function Transform() {
         end: "100% 30%",
 
         duration: 1.5,
-        markers: true,
+        //markers: true,
         toggleActions: "play reverse play reverse",
       },
       duration: 1.5,

@@ -112,9 +112,9 @@ export default function Hero() {
       {/*right side of screen */}
       <Suspense fallback={<MainTitle />}></Suspense>
       <div className="flex flex-col flex-nowrap lg:flex-1 lg:w-auto w-full ">
-        <div className="flex flex-col lg:w-min lg:items-end h-min text-center">
+        <div className="flex flex-col lg:w-min lg:items-end h-min text-center lg:mt-5">
           <h1
-            className="lg:text-[12.25rem]  text-[5rem] text-white leading-none lg:tracking-[.15em] xl:tracking-[.18em] xl:-translate-y-4 lg:absolute lg:-right-[.15em]  translate-x-[100%] lg:ml-0 opacity-0"
+            className="lg:text-[12.25rem]  text-[5rem] text-white leading-none lg:tracking-[.15em] xl:tracking-[.18em]  lg:absolute lg:-right-[.15em]  translate-x-[100%]  opacity-0"
             ref={(e) => {
               title.current[0] = e;
             }}
@@ -122,7 +122,7 @@ export default function Hero() {
             MANASA
           </h1>
           <h1
-            className="lg:text-[12.25rem] text-[5rem] text-white leading-none lg:tracking-wide lg:w-min lg:h-min lg:mt-36 lg:mr-0  translate-x-[100%]  opacity-0"
+            className="lg:text-[12.25rem] text-[5rem] text-white leading-none lg:tracking-wide lg:w-min lg:h-min lg:mt-40 lg:mr-0  translate-x-[100%]  opacity-0"
             ref={(e) => {
               title.current[1] = e;
             }}
