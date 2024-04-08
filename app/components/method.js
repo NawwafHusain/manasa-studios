@@ -185,10 +185,10 @@ export default function Method() {
             <p className={"text-sm w-[90%] font-light"}>
               The final stretch involves rigorous testing, quality assurance,
               and preparing the deployment strategy. Upon final approval, we
-              launch your website or application, ensuring it's fully optimized
-              for performance and SEO. Post-launch, we continue to offer support
-              and maintenance to guarantee the longevity and success of your
-              project.
+              launch your website or application, ensuring it&apos;s fully
+              optimized for performance and SEO. Post-launch, we continue to
+              offer support and maintenance to guarantee the longevity and
+              success of your project.
             </p>
             <p className="absolute bottom-5 right-5 text-md">4</p>
           </div>
