@@ -40,7 +40,7 @@ export default function Contact() {
   };
   return (
     <section className="pt-40 px-4 relative mt-16 overflow-x-clip" id="contact">
-      <div className="w-full h-[40rem] cards rounded-3xl flex justify-center flex-col items-center gap-8 relative ">
+      <div className="w-full lg:h-[40rem] h-[30rem] cards rounded-3xl flex justify-center flex-col items-center gap-8 relative ">
         <div className="absolute w-full h-full top-0 left-0 overflow-clip rounded-3xl">
           <Image
             src={"/images/3dBlobsRot.png"}
@@ -50,21 +50,23 @@ export default function Contact() {
           />
         </div>
 
-        <h1 className="text-7xl font-bold text-white relative">Book a Call</h1>
-        <p className="text-3xl font-normal text-white relative">
+        <h1 className="lg:text-7xl font-bold text-white relative lg:text-left text-center text-8xl">
+          Book a Call
+        </h1>
+        <p className="text-3xl font-normal text-white relative lg:text-left text-center">
           We&apos;ll get back to you ASAP!
         </p>
-        <div className="w-[50%] h-auto relative">
+        <div className="lg:w-[50%] w-full h-auto relative">
           <form onSubmit={handleSubmit}>
             <input
               type="email"
               name="email"
               placeholder="Email"
-              className="w-full rounded-full px-8 py-4 text-xl"
+              className="w-full lg:rounded-full rounded-3xl lg:px-8 py-4 lg:text-xl px-4 text-sm "
               onChange={(e) => setEmail(e.target.value)}
             />
             <button
-              className={`absolute top-[50%] -translate-y-[50%] right-1 hover:bg-slate-400 bg-slate-300 rounded-full h-[90%] w-[20%] ${
+              className={`absolute top-[50%] text-sm lg:text-lg -translate-y-[50%] right-1 hover:bg-slate-400 bg-slate-300 lg:rounded-full rounded-3xl h-[90%] w-[25%] lg:w-[20%] ${
                 isSubmitting && "disabled"
               }`}
               type="submit"

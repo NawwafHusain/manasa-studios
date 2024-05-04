@@ -50,12 +50,12 @@ export default function Transform() {
   const image = useRef();
   return (
     <section
-      className="pt-40 px-4 relative  min-h-[100vh] overflow-x-clip"
+      className="lg:pt-40 pt-10 px-4 relative  min-h-[100vh] overflow-x-clip"
       ref={root}
     >
       <div className="text-white">
         <h1
-          className="text-[7rem] mb-0 opacity-100"
+          className="lg:text-[7rem] text-[4rem] text-center lg:text-left mb-0 opacity-100 lg:block hidden"
           ref={(e) => {
             title.current[0] = e;
           }}
@@ -63,8 +63,17 @@ export default function Transform() {
           Transforming the <br />
           Digital Landscape
         </h1>
+        {/*mobile title */}
+        <h1
+          className="lg:hidden text-[3.4rem] text-center  mb-0 opacity-100 w-[100%]"
+          ref={(e) => {
+            title.current[0] = e;
+          }}
+        >
+          Transforming the Digital Landscape
+        </h1>
         <p
-          className="text-md font-thin w-[45%] opacity-100"
+          className="text-md lg:font-thin font-light lg:w-[45%] lg:text-left text-center opacity-100"
           ref={(e) => {
             title.current[1] = e;
           }}
@@ -74,6 +83,8 @@ export default function Transform() {
           Landscape&quot; is our commitment to innovation and excellence in the
           digital realm. Our team of visionary designers and developers is
           dedicated to crafting online experiences that resonate and engage.
+          <br />
+          <br />
           With every line of code and pixel-perfect design, we aim to push the
           boundaries of what&apos;s possible, setting new standards for digital
           presence and connectivity. Join us on a journey where your
@@ -86,7 +97,7 @@ export default function Transform() {
         src={"/images/landscape.png"}
         width={1200}
         height={1200}
-        className="absolute top-[21%] -right-80 -z-10 opacity-100 translate-x-0"
+        className="absolute lg:top-[21%] top-[35%] lg:-right-80 -z-10 opacity-40 lg:opacity-100 translate-x-0 -right-[50%] lg:scale-100 scale-[1.9]"
         alt="landscape"
         ref={image}
       />

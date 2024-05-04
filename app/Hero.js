@@ -89,8 +89,7 @@ export default function Hero() {
         style={{ clipPath: "url(#clip-path)" }}
       >
         <h1 className="lg:text-[4.7rem]  text-xl lg:leading-[1.19em] leading-[2.5em] text-white mt-5 lg:ml-9 ml-4  ">
-          Web <br />
-          Design + <br />
+          Web <br /> Design + <br />
           Developement
           <br />
         </h1>
@@ -104,7 +103,7 @@ export default function Hero() {
           src={"/images/prism.png"}
           width={650}
           height={650}
-          className="absolute -bottom-[9rem] -left-[6rem] -z-10 lg:opacity-90 opacity-60  h-[100%]  min-w-[100%]  object-cover"
+          className="absolute -bottom-[9rem] -left-[6rem] -z-10 lg:opacity-60 opacity-60  h-[100%]  min-w-[100%]  object-cover"
           alt="3D prism background"
         />
       </div>
@@ -141,8 +140,7 @@ export default function Hero() {
           >
             <div className="absolute flex-1 w-full h-full top-0 left-0 p-4 lg:p-8 text-white rounded-3xl ">
               <h2 className="lg:text-3xl text-xl">
-                Web <br />
-                Design + <br />
+                Web Design + <br />
                 Developement
                 <br />
               </h2>
@@ -154,7 +152,7 @@ export default function Hero() {
                 src={"/images/prism.png"}
                 width={650}
                 height={650}
-                className="absolute -top-0 -left-20 -z-10 lg:opacity-90 opacity-60  h-[100%]    object-cover"
+                className="absolute -top-0 -left-20 -z-10 lg:opacity-60 opacity-60  h-[100%]    object-cover"
                 alt="blobs Background"
               />
             </div>
@@ -178,7 +176,7 @@ export default function Hero() {
                 src={"/images/blobsRot.png"}
                 width={650}
                 height={650}
-                className="absolute -top-0 -right-20 -z-10 lg:opacity-90 opacity-60  h-[100%]    object-cover"
+                className="absolute -top-0 -right-20 -z-10 lg:opacity-60 opacity-60  h-[100%]    object-cover"
                 alt="blobs Background"
               />
             </div>
@@ -205,7 +203,7 @@ export default function Hero() {
                 src={"/images/purpleWave.png"}
                 width={450}
                 height={450}
-                className="absolute -top-0 -right-0 -z-10 lg:opacity-90 opacity-60  h-[100%]    object-cover"
+                className="absolute -top-0 -right-0 -z-10 lg:opacity-60 opacity-60  h-[100%]    object-cover"
                 alt="Purple wave background"
               />
             </div>

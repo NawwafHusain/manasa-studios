@@ -25,6 +25,7 @@ export default function Nav() {
         delay: 0.5,
         opacity: 1,
       });
+      console.log(isMobile);
 
       gsap.to(navRef.current, {
         scrollTrigger: {

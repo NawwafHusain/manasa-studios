@@ -3,11 +3,13 @@ import Image from "next/image";
 export default function Method() {
   return (
     <section
-      className="pt-40 px-4 relative mt-16 overflow-x-clip"
+      className="lg:pt-40 pt-12 px-4 relative mt-16 overflow-x-clip"
       id="methadology"
     >
-      <h1 className="text-white text-7xl mb-24">Methodolgy</h1>
-      <div className="flex-1 max-w-screen flex flex-wrap gap-20 justify-around mt-16 space-y-10 text-white">
+      <h1 className="text-white lg:text-7xl text-6xl lg:text-left text-center lg:mb-24 mb-10">
+        Methodolgy
+      </h1>
+      <div className="flex-1 max-w-screen hidden lg:flex flex-wrap gap-20 justify-around mt-16 space-y-10 text-white">
         {/*Requirments */}
         <div className="cards w-80 h-[22rem] rounded-3xl translate-y-8 relative">
           <div
@@ -192,6 +194,138 @@ export default function Method() {
             </p>
             <p className="absolute bottom-5 right-5 text-md">4</p>
           </div>
+        </div>
+      </div>
+      {/*Mobile View*/}
+      <div className="flex-1 max-w-screen lg:hidden flex flex-wrap justify-around space-y-5 text-white">
+        {/*Requirments */}
+        <div className="cards w-80 h-[22rem] rounded-3xl relative">
+          <div
+            className={
+              "absolute w-full h-full rounded-3xl overflow-clip top-0 left-0"
+            }
+          >
+            <Image
+              src={"/images/two-ended-cone.png"}
+              width={600}
+              height={600}
+              alt="abstract shape background"
+              className="absolute -right-10 -bottom-24 scale-[1.25] -z-10 opacity-60 rotate-12"
+            />
+          </div>
+          <h2 className={"text-2xl mb-5"}>
+            Requirements <br /> Gathering
+          </h2>
+          <p className={"text-sm w-[90%] font-light"}>
+            Our web design journey begins with a deep understanding of your
+            business goals and audience needs. We conduct research and consult
+            you to define the project scope and chart a clear roadmap, ensuring
+            that your expectations are precisely met.
+          </p>
+          <p className="absolute bottom-5 right-5 text-md">1</p>
+        </div>
+        {/*Ui */}
+        <div className="cards w-80 h-[22rem] rounded-3xl relative">
+          <div
+            className={
+              "absolute w-full h-full rounded-3xl overflow-clip top-0 left-0"
+            }
+          >
+            <Image
+              src={"/images/hexagon-curved-spikes.png"}
+              width={600}
+              height={600}
+              alt="abstract shape background"
+              className="absolute -left-20 -bottom-20 scale-[1.25] -z-10 opacity-60"
+            />
+          </div>
+          <h2 className={"text-2xl mb-5"}>UI/UX Design</h2>
+          <p className={"text-sm w-[90%] font-light"}>
+            We emphasize the importance of a seamless user experience coupled
+            with an engaging design that reflects your brand identity. Our team
+            specializes in crafting intuitive interfaces and compelling user
+            journeys that resonate with your target audience and reinforce your
+            online presence while aligning with your business needs.
+          </p>
+          <p className="absolute bottom-5 right-5 text-md">2</p>
+        </div>
+        {/* First Draft */}
+        <div className="cards w-80 h-[22rem] rounded-3xl relative">
+          <div
+            className={
+              "absolute w-full h-full rounded-3xl overflow-clip top-0 left-0"
+            }
+          >
+            <Image
+              src={"/images/triple-stacked-cuboids.png"}
+              width={600}
+              height={600}
+              alt="abstract shape background"
+              className="absolute -right-36 scale-[1.55] -z-10 opacity-60 -rotate-12"
+            />
+          </div>
+          <h2 className={"text-2xl mb-5"}>First Draft Development</h2>
+          <p className={"text-sm w-[90%] font-light"}>
+            The development of the first draft brings your vision to life. With
+            meticulous attention to detail, we translate the finalized design
+            into a functional prototype. This phase allows us to iterate quickly
+            and integrate feedback, ensuring the end product is not only
+            visually appealing but technically sound. In this phase, we focus on
+            developing core functionality and overall site architecture and
+            implenet any changes needed based on feedback.
+          </p>
+          <p className="absolute bottom-5 right-5 text-md">3</p>
+        </div>
+        {/*Second Draft */}
+        <div className="cards w-80 h-[22rem] rounded-3xl relative">
+          <div
+            className={
+              "absolute w-full h-full rounded-3xl overflow-clip top-0 left-0"
+            }
+          >
+            <Image
+              src={"/images/wireframe-globe.png"}
+              width={600}
+              height={600}
+              alt="abstract shape background"
+              className="absolute -right-40 scale-150 -z-10 opacity-60"
+            />
+          </div>
+          <h2 className={"text-2xl mb-5"}>Second Draft Developement</h2>
+          <p className={"text-sm w-[90%] font-light"}>
+            Building upon the first draft, the second phase of development
+            focuses on refining features, optimizing user interfaces, and
+            ensuring responsiveness across all devices. At this stage, we
+            incorporate initial feedback to enhance functionality and user
+            interaction, getting closer to the polished version of your digital
+            product.
+          </p>
+          <p className="absolute bottom-5 right-5 text-md">5</p>
+        </div>
+        {/*Final */}
+        <div className="cards w-80 h-[22rem] rounded-3xl">
+          <div
+            className={
+              "absolute w-full h-full rounded-3xl overflow-clip top-0 left-0"
+            }
+          >
+            <Image
+              src={"/images/stacked-cube.png"}
+              width={700}
+              height={700}
+              alt="abstract shape background"
+              className="absolute -left-20 -bottom-20 scale-[1.25] -z-10 opacity-60"
+            />
+          </div>
+          <h2 className={"text-2xl mb-5"}>Final Delivery and Deployment</h2>
+          <p className={"text-sm w-[90%] font-light"}>
+            The final stretch involves rigorous testing, quality assurance, and
+            preparing the deployment strategy. Upon final approval, we launch
+            your website or application, ensuring it&apos;s fully optimized for
+            performance and SEO. Post-launch, we continue to offer support and
+            maintenance to guarantee the longevity and success of your project.
+          </p>
+          <p className="absolute bottom-5 right-5 text-md">4</p>
         </div>
       </div>
     </section>
