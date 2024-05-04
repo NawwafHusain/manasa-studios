@@ -111,7 +111,7 @@ export default function Hero() {
       {/*right side of screen */}
       <Suspense fallback={<MainTitle />}></Suspense>
       <div className="flex flex-col flex-nowrap lg:flex-1 lg:w-auto w-full ">
-        <div className="flex flex-col lg:w-min lg:items-end h-min text-center lg:mt-5">
+        <div className="flex flex-col lg:w-min lg:items-end h-min text-center lg:mt-5 mt-2">
           <h1
             className="lg:text-[12.25rem]  text-[5rem] text-white leading-none lg:tracking-[.15em] xl:tracking-[.18em]  lg:absolute lg:-right-[.15em]  translate-x-[100%]  opacity-0"
             ref={(e) => {
@@ -130,7 +130,7 @@ export default function Hero() {
           </h1>
         </div>
 
-        <div className="lg:flex gap-8 flex-1 relative bottom-3 lg:flex-row flex-col mt-5 lg:mt-2 flex ">
+        <div className="lg:flex lg:gap-8 gap-2 flex-1 relative bottom-3 lg:flex-row flex-col mt-5 lg:mt-2 flex ">
           {/*mobile wiggly div */}
           <div
             className="card flex-auto lg:w-[9rem] rounded-3xl overflow-clip lg:hidden "

@@ -79,9 +79,9 @@ export default function Transform() {
           }}
         >
           At Manasa Studios, we&apos;re not just building websites; we&apos;re
-          sculpting the digital future. &quot;Transforming The Digital
+          sculpting the digital future. &quot;Transforming the Digital
           Landscape&quot; is our commitment to innovation and excellence in the
-          digital realm. Our team of visionary designers and developers is
+          digital realm. Our team of visionary designers and developers are
           dedicated to crafting online experiences that resonate and engage.
           <br />
           <br />
