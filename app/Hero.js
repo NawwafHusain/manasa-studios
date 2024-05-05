@@ -69,7 +69,7 @@ export default function Hero() {
 
   return (
     <section
-      className="flex w-full xl:h-[100vh] h-[100vh] pt-28 xl:box-border justify-center relative xl:gap-0 gap-4 xl:px-0 xl:items-stretch right-2"
+      className=" flex w-full xl:h-[100vh] h-[100vh] pt-28 xl:box-border justify-center relative xl:gap-0 gap-4 xl:px-0 xl:items-stretch right-2 px-8"
       ref={root}
       id="hero"
     >
@@ -89,13 +89,13 @@ export default function Hero() {
       </svg>
       {/* wigglyt div desktop */}
       <div
-        className="xl:w-80 w-40  flex-1 card rounded-3xl mt-4 bottom-3 relative xl:flex flex-col card-wave xl:right-10 xl:ml-10 translate-x-[0%]  hidden"
+        className="xl:w-[35vw] max-h-[95%] w-40  card rounded-3xl mt-4 bottom-3 relative xl:flex flex-col card-wave xl:right-5 xl:ml-10 translate-x-[0%]  hidden"
         ref={(e) => {
           card.current[0] = e;
         }}
         style={{ clipPath: "url(#clip-path)" }}
       >
-        <h1 className="xl:text-[4.7rem]  text-xl xl:leading-[1.19em] leading-[2.5em] text-white mt-5 xl:ml-9 ml-4  ">
+        <h1 className="xl:text-[4.5vw] xxl:text-[5rem]  text-xl xl:leading-[12vh] leading-[2.5em] text-white mt-5 xl:ml-9 ml-4  ">
           Web <br /> Design + <br />
           Developement
           <br />
@@ -108,8 +108,8 @@ export default function Hero() {
         </ul>
         <Image
           src={"/images/prism.png"}
-          width={650}
-          height={650}
+          width={750}
+          height={750}
           className="absolute -bottom-[9rem] -left-[6rem] -z-10 xl:opacity-60 opacity-60  h-[100%]  min-w-[100%]  object-cover"
           alt="3D prism background"
         />
@@ -124,10 +124,10 @@ export default function Hero() {
       </div> */}
       {/*right side of screen */}
       <Suspense fallback={<MainTitle />}></Suspense>
-      <div className="flex flex-col flex-nowrap xl:flex-1 xl:w-auto w-full lg:w-[50vw] ">
+      <div className="flex flex-col flex-nowrap xl:w-[60vw]  w-full lg:w-[50vw] h-full">
         <div className="flex flex-col xl:w-min xl:items-end h-min text-center xl:mt-5 mt-2 lg:w-[50vw]">
           <h1
-            className="xl:text-[12.25rem]  text-[5rem] text-white leading-none xl:tracking-[.15em]  lg:text-[12.5rem]  xl:absolute xl:-right-[.15em]  translate-x-[100%]  opacity-0"
+            className="xl:text-[12.5vw] xxl:text-[12.5rem]  text-[17vw] text-white leading-none xl:tracking-[2.3vw] xxl:tracking-[3vw]  lg:text-[12.5rem] xl:right-1  xl:absolute  translate-x-[100%]  opacity-0"
             ref={(e) => {
               title.current[0] = e;
             }}
@@ -135,7 +135,7 @@ export default function Hero() {
             MANASA
           </h1>
           <h1
-            className="xl:text-[12.25rem] text-[5rem] text-white leading-none xl:tracking-wide lg:text-[12.5rem] xl:w-min xl:h-min xl:mt-40 xl:mr-0  translate-x-[100%]  opacity-0"
+            className="xl:text-[12.5vw] xxl:text-[12.5rem] text-[17vw] text-white leading-none xl:tracking-[0.55vw] xxl:tracking-[1.65vw] lg:text-[12.5rem] xl:w-min xl:h-min xl:mt-40 xl:mr-0  translate-x-[100%]  opacity-0 text-justify"
             ref={(e) => {
               title.current[1] = e;
             }}
@@ -144,7 +144,7 @@ export default function Hero() {
           </h1>
         </div>
 
-        <div className="xl:flex xl:gap-8 gap-2 flex-1 relative bottom-3 xl:flex-row flex-col mt-5 xl:mt-2 flex ">
+        <div className="xl:flex xl:gap-8 gap-2 flex-1 relative bottom-3 xl:flex-row flex-col mt-5 xl:mt-2 flex xl:max-h-[50vh]">
           {/*mobile wiggly div */}
           <div
             className="card flex-auto xl:w-[9rem] rounded-3xl overflow-clip xl:hidden "

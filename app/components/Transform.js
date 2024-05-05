@@ -50,12 +50,12 @@ export default function Transform() {
   const image = useRef();
   return (
     <section
-      className="lg:pt-40 pt-10 px-4 relative  lg:min-h-[100vh] overflow-x-clip"
+      className="lg:pt-40 pt-10 px-12 lg:px-16 relative  lg:min-h-[100vh] overflow-x-clip"
       ref={root}
     >
       <div className="text-white">
         <h1
-          className="lg:text-[7rem] text-[4rem] text-center lg:text-left mb-0 opacity-100 lg:block hidden"
+          className="lg:text-[7rem] text-[17vw] text-center lg:text-left mb-0 opacity-100 lg:block hidden"
           ref={(e) => {
             title.current[0] = e;
           }}
@@ -65,7 +65,7 @@ export default function Transform() {
         </h1>
         {/*mobile title */}
         <h1
-          className="lg:hidden text-[3.4rem] text-center  mb-0 opacity-100 w-[100%]"
+          className="lg:hidden text-[12vw] text-center  mb-5 opacity-100 w-[100%]"
           ref={(e) => {
             title.current[0] = e;
           }}
@@ -73,7 +73,7 @@ export default function Transform() {
           Transforming the Digital Landscape
         </h1>
         <p
-          className="text-md lg:font-thin font-light lg:w-[45%] lg:text-left text-center opacity-100"
+          className="text-sm lg:font-thin font-light lg:w-[45%] lg:text-left text-center opacity-100"
           ref={(e) => {
             title.current[1] = e;
           }}

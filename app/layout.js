@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       {/*The fixed height here is to allow for the Nav to be sticky */}
       <body
-        className={`${josefin_Sans.className} relative xl:h-[825vh] min-h-[700vh] overflow-x-clip`}
+        className={`${josefin_Sans.className} relative  grid grid-cols-1 justify-items-center w-screen overflow-x-clip`}
       >
         <Toaster
           position="top-center"
@@ -29,8 +29,11 @@ export default function RootLayout({ children }) {
             },
           }}
         />
-        <Nav />
-        {children}
+
+        <container className="overflow-x-clip relative xl:w-screen max-w-[1920px] w-max xl:h-[825vh] min-h-[700vh] min-w-[360px] flex flex-col items-center">
+          <Nav />
+          {children}
+        </container>
       </body>
     </html>
   );

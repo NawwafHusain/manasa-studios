@@ -47,10 +47,10 @@ export default function Contact() {
   };
   return (
     <section
-      className=" px-4 relative overflow-x-clip xl:h-[100vh] flex justify-center items-center"
+      className=" px-4 lg:px-16 relative overflow-x-clip xl:h-[100vh] flex justify-center items-center"
       id="contact"
     >
-      <div className="w-full lg:h-[40rem] h-[30rem] cards rounded-3xl flex justify-center flex-col items-center gap-8 relative ">
+      <div className="w-full lg:h-[40rem] h-[30rem] cards rounded-3xl flex justify-center flex-col items-center lg:gap-8 gap-2 relative ">
         <div className="absolute w-full h-full top-0 left-0 overflow-clip rounded-3xl">
           <Image
             src={"/images/3dBlobsRot.png"}
@@ -60,10 +60,10 @@ export default function Contact() {
           />
         </div>
 
-        <h1 className="lg:text-7xl font-bold text-white relative lg:text-left text-center text-8xl">
+        <h1 className="lg:text-7xl font-bold text-white relative lg:text-left text-center text-5xl mt-5 lg:mt-0">
           Book a Call
         </h1>
-        <p className="text-3xl font-normal text-white relative lg:text-left text-center">
+        <p className="text-1xl font-normal text-white relative lg:text-left text-center lg:mb-0 mb-8">
           We&apos;ll get back to you ASAP!
         </p>
         <div className="lg:w-[50%] w-full h-auto relative">
@@ -83,7 +83,7 @@ export default function Contact() {
                 name="service"
                 placeholder="service"
                 defaultValue=""
-                className="w-[40%] lg:rounded-full rounded-3xl lg:px-8 py-4 lg:text-xl px-4 text-sm "
+                className="lg:w-[40%] lg:rounded-full rounded-3xl lg:px-8 py-4 lg:text-xl px-4 text-sm "
                 onChange={(e) => setService(e.target.value)}
               >
                 <option value="">Package</option>

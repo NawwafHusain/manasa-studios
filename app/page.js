@@ -38,7 +38,7 @@ export default function Home() {
  />
 </section>`;
   return (
-    <main className="w-screen lg:px-8 px-2 absolute top-0 overflow-x-clip ">
+    <main className="absolute top-0 overflow-x-clip w-full ">
       <Hero />
       <Suspense fallback={transform}>
         <Transform />

@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Method() {
   return (
     <section
-      className="lg:pt-40 pt-12 px-4 relative mt-16 overflow-x-clip"
+      className="lg:pt-40 pt-12 px-4 lg:px-16 relative mt-16 overflow-x-clip"
       id="methadology"
     >
       <h1 className="text-white lg:text-7xl text-6xl lg:text-left text-center lg:mb-24 mb-10">

@@ -82,7 +82,7 @@ export default function Nav() {
   return (
     <>
       <div
-        className={`top-0 left-0 w-screen lg:p-8 p-4 h-28   min-h-28 z-10 sticky flex justify-center items-center overflow-x-clip`}
+        className={`top-0 left-0 max-w-[1920] w-full lg:p-8 p-4 h-28   min-h-28 z-10 sticky flex justify-center items-center overflow-x-clip`}
         ref={root}
       >
         <div
@@ -236,7 +236,7 @@ export default function Nav() {
       </div>
       <div
         ref={triggerRef}
-        className="w-10 h-10 bg-transparent absolute top-15 left-15"
+        className="w-10 h-10  absolute top-24 left-15"
       ></div>
     </>
   );

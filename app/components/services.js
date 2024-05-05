@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <div id="services" className="text-white pt-40 mb-16">
-      <h1 className="lg:text-7xl lg:text-left text-center text-6xl mb-4">
+    <div id="services" className="text-white pt-40 mb-16 lg:px-16 px-4">
+      <h1 className="lg:text-7xl lg:text-left text-center text-6xl mb-4 ">
         Services
       </h1>
 
@@ -259,19 +259,19 @@ export default function Services() {
         </div>
         <div className="flex-2 flex flex-col mt-20 xl:w-[70%] xl:px-0 px-7">
           <h1 className="m-0 text-4xl">Official Partners</h1>
-          <div className="flex justify-center items-center gap-10">
+          <div className="flex justify-center items-center gap-10 flex-col md:flex-row mt-10 md:mt-0">
             <Image
               src="/images/MedabaLogo.jpg"
               width={500}
               height={500}
               className="object-contain"
             />
-            <h1 className="text-7xl">X</h1>
+            <h1 className="text-7xl ">X</h1>
             <Image
               src="/images/LogoWhite.png"
               width={300}
               height={300}
-              className="object-contain"
+              className="object-contain md:scale-100 scale-75 -translate-y-[25%] md:translate-y-0"
             />
           </div>
           <div className="rounded-full w-[10rem] py-4  border-2 border-white flex justify-center items-center self-end hover:bg-white hover:text-black">
