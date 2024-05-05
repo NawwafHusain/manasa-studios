@@ -223,7 +223,7 @@ export default function Nav() {
               className=" nav-button rounded-full flex justify-center items-center"
               onClick={() => scrollToSection("methadology")}
             >
-              Methadology
+              Methodology
             </li>
             <li
               className=" nav-button rounded-full flex justify-center items-center"

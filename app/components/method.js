@@ -1,17 +1,105 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+
+import { useRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
 export default function Method() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const card = useRef([]);
+  const card2 = useRef([]);
+  const title = useRef();
+  const root = useRef();
+
+  useGSAP(() => {
+    gsap.to(title.current, {
+      scrollTrigger: {
+        trigger: root.current,
+        start: "top 50%",
+        end: "100% 60%",
+        toggleAction: "play reverse play reverse",
+      },
+      duration: 1,
+      stagger: 0.1,
+      x: 0,
+      ease: "power4.out",
+      delay: 0,
+      opacity: 1,
+
+      touchAction: "play reverse play reverse",
+    });
+
+    gsap.to(card.current, {
+      scrollTrigger: {
+        trigger: root.current,
+        start: "top 40%",
+        end: "100% 10%",
+        toggleAction: "play reverse play reverse",
+      },
+      duration: 1,
+      stagger: 0.7,
+      x: 0,
+      opacity: 1,
+      ease: "liner",
+      touchAction: "play reverse play reverse",
+    });
+
+    card2.current.forEach((el, i) => {
+      gsap.to(el, {
+        scrollTrigger: {
+          trigger: el,
+          start: "top 60%",
+          end: "100% 40%",
+          toggleActions: "play reverse play reverse",
+        },
+        duration: 1,
+        x: 0,
+        opacity: 1,
+        ease: "power1.inOut",
+        stagger: 0.2,
+        touchAction: "play reverse play reverse",
+      });
+    });
+
+    // gsap.to(card2.current, {
+    //   scrollTrigger: {
+    //     trigger: root.current,
+    //     start: "top 40%",
+    //     end: "100%  60%",
+    //   },
+    //   duration: 1,
+    //   stagger: 1,
+    //   opacity: 1,
+    //   x: 0,
+    //   ease: "liner",
+    //   touchAction: "play reverse play reverse",
+    // });
+  });
+
   return (
     <section
-      className="lg:pt-40 pt-12 px-4 lg:px-16 relative mt-16 overflow-x-clip"
+      className="lg:pt-40 pt-12 px-8 lg:px-16 relative mt-16 overflow-x-clip"
       id="methadology"
+      ref={root}
     >
-      <h1 className="text-white lg:text-7xl text-6xl lg:text-left text-center lg:mb-24 mb-10">
+      <h1
+        className="text-white lg:text-7xl text-6xl lg:text-left text-center lg:mb-24 mb-10 opacity-0 translate-x-[-20%]"
+        ref={title}
+      >
         Methodolgy
       </h1>
       <div className="flex-1 max-w-screen hidden lg:flex flex-wrap gap-20 justify-around mt-16 space-y-10 text-white">
         {/*Requirments */}
-        <div className="cards w-80 h-[22rem] rounded-3xl translate-y-8 relative">
+        <div
+          ref={(e) => {
+            card.current[0] = e;
+          }}
+          className="opacity-0   cards w-80 h-[22rem] rounded-3xl translate-y-8 relative"
+        >
           <div
             className={
               "absolute w-full h-full rounded-3xl overflow-clip top-0 left-0"
@@ -50,7 +138,12 @@ export default function Method() {
           </svg>
         </div>
         {/*Ui */}
-        <div className="cards w-80 h-[22rem] rounded-3xl -translate-y-24 relative">
+        <div
+          ref={(e) => {
+            card.current[1] = e;
+          }}
+          className="opacity-0   cards w-80 h-[22rem] rounded-3xl -translate-y-24 relative"
+        >
           <div
             className={
               "absolute w-full h-full rounded-3xl overflow-clip top-0 left-0"
@@ -88,7 +181,12 @@ export default function Method() {
           </svg>
         </div>
         {/* First Draft */}
-        <div className="cards w-80 h-[22rem] rounded-3xl relative">
+        <div
+          ref={(e) => {
+            card.current[2] = e;
+          }}
+          className="opacity-0   cards w-80 h-[22rem] rounded-3xl relative"
+        >
           <div
             className={
               "absolute w-full h-full rounded-3xl overflow-clip top-0 left-0"
@@ -130,7 +228,12 @@ export default function Method() {
         {/* bottom part*/}
         <div className="w-screen flex gap-60 justify-center">
           {/*Second Draft */}
-          <div className="cards w-80 h-[22rem] rounded-3xl relative">
+          <div
+            ref={(e) => {
+              card.current[4] = e;
+            }}
+            className="opacity-0   cards w-80 h-[22rem] rounded-3xl relative"
+          >
             <div
               className={
                 "absolute w-full h-full rounded-3xl overflow-clip top-0 left-0"
@@ -169,7 +272,12 @@ export default function Method() {
             </svg>
           </div>
           {/*Final */}
-          <div className="cards w-80 h-[22rem] rounded-3xl translate-y-16">
+          <div
+            ref={(e) => {
+              card.current[3] = e;
+            }}
+            className="opacity-0   cards w-80 h-[22rem] rounded-3xl translate-y-16"
+          >
             <div
               className={
                 "absolute w-full h-full rounded-3xl overflow-clip top-0 left-0"
@@ -199,7 +307,12 @@ export default function Method() {
       {/*Mobile View*/}
       <div className="flex-1 max-w-screen lg:hidden flex flex-wrap justify-around space-y-5 text-white">
         {/*Requirments */}
-        <div className="cards w-80 h-[22rem] rounded-3xl relative">
+        <div
+          ref={(e) => {
+            card2.current[0] = e;
+          }}
+          className="cards w-80 h-[22rem] rounded-3xl relative opacity-0"
+        >
           <div
             className={
               "absolute w-full h-full rounded-3xl overflow-clip top-0 left-0"
@@ -214,7 +327,7 @@ export default function Method() {
             />
           </div>
           <h2 className={"text-2xl mb-5"}>
-            Requirements <br /> Gathering
+            Gathering <br /> Requirements
           </h2>
           <p className={"text-sm w-[90%] font-light"}>
             Our web design journey begins with a deep understanding of your
@@ -225,7 +338,12 @@ export default function Method() {
           <p className="absolute bottom-5 right-5 text-md">1</p>
         </div>
         {/*Ui */}
-        <div className="cards w-80 h-[22rem] rounded-3xl relative">
+        <div
+          ref={(e) => {
+            card2.current[1] = e;
+          }}
+          className="cards w-80 h-[22rem] rounded-3xl relative opacity-0"
+        >
           <div
             className={
               "absolute w-full h-full rounded-3xl overflow-clip top-0 left-0"
@@ -250,7 +368,12 @@ export default function Method() {
           <p className="absolute bottom-5 right-5 text-md">2</p>
         </div>
         {/* First Draft */}
-        <div className="cards w-80 h-[22rem] rounded-3xl relative">
+        <div
+          ref={(e) => {
+            card2.current[2] = e;
+          }}
+          className="cards w-80 h-[26rem] rounded-3xl relative opacity-0"
+        >
           <div
             className={
               "absolute w-full h-full rounded-3xl overflow-clip top-0 left-0"
@@ -277,7 +400,12 @@ export default function Method() {
           <p className="absolute bottom-5 right-5 text-md">3</p>
         </div>
         {/*Second Draft */}
-        <div className="cards w-80 h-[22rem] rounded-3xl relative">
+        <div
+          ref={(e) => {
+            card2.current[3] = e;
+          }}
+          className="cards w-80 h-[22rem] rounded-3xl relative opacity-0"
+        >
           <div
             className={
               "absolute w-full h-full rounded-3xl overflow-clip top-0 left-0"
@@ -303,7 +431,13 @@ export default function Method() {
           <p className="absolute bottom-5 right-5 text-md">5</p>
         </div>
         {/*Final */}
-        <div className="cards w-80 h-[22rem] rounded-3xl">
+        <div
+          ref={(e) => {
+            card2.current[4] = e;
+          }}
+          className="cards w-80 h-[22rem] rounded-3xl opacity-0 relative"
+        >
+          {" "}
           <div
             className={
               "absolute w-full h-full rounded-3xl overflow-clip top-0 left-0"

@@ -50,7 +50,7 @@ export default function Hero() {
         stagger: 0.1,
         y: 0,
         ease: "power4.out",
-        delay: isMobile ? 1 : 0,
+        delay: isMobile ? 0.5 : 0,
         opacity: 1,
         touchAction: "play reverse play reverse",
       });
@@ -89,7 +89,7 @@ export default function Hero() {
       </svg>
       {/* wigglyt div desktop */}
       <div
-        className="xl:w-[35vw] max-h-[95%] w-40  card rounded-3xl mt-4 bottom-3 relative xl:flex flex-col card-wave xl:right-5 xl:ml-10 translate-x-[0%]  hidden"
+        className="xl:w-[35vw] max-h-[100%] w-40  card rounded-3xl mt-4 bottom-3 relative xl:flex flex-col card-wave xl:right-5 xl:ml-10 translate-x-[0%]  hidden"
         ref={(e) => {
           card.current[0] = e;
         }}
@@ -97,7 +97,7 @@ export default function Hero() {
       >
         <h1 className="xl:text-[4.5vw] xxl:text-[5rem]  text-xl xl:leading-[12vh] leading-[2.5em] text-white mt-5 xl:ml-9 ml-4  ">
           Web <br /> Design + <br />
-          Developement
+          Development
           <br />
         </h1>
         <ul className="xl:ml-9 ml-4 xl:text-4xl text-md  mt-10 text-white font-light xxl:text-black">
@@ -113,6 +113,9 @@ export default function Hero() {
           className="absolute -bottom-[9rem] -left-[6rem] -z-10 xl:opacity-60 opacity-60  h-[100%]  min-w-[100%]  object-cover"
           alt="3D prism background"
         />
+        <div className="absolute bottom-[2rem] right-[2rem] bg-black text-white rounded-lg px-6 py-3 cursor-pointer">
+          View Our Packages
+        </div>
       </div>
       {/* <div className="xl:w-[38vw] lg:w-[50vw] relative h-[98%]">
         <div className="wiggle1"></div>
@@ -152,15 +155,16 @@ export default function Hero() {
               card.current[1] = e;
             }}
           >
-            <div className="absolute flex-1 w-full h-full top-0 left-0 p-4 xl:p-8 text-white rounded-3xl ">
+            <div className="absolute flex-1 w-full h-full top-0 left-0 px-4 pt-4 pb-6 xl:p-8 text-white rounded-3xl ">
               <h2 className="xl:text-3xl text-xl lg:text-[3rem] lg:mt-8 lg:mb-8">
-                Web Design + <br className="xl:block lg:hidden" />
-                Developement
+                Web Design + Developement
                 <br />
               </h2>
               <p className="text-[0.8rem] xl:text-md lg:text-[1.75rem] font-light">
-                Bespoke web design and development that breathes life into your
-                brand.
+                We offer custom web design and development services tailored to
+                your business needs. Our team of experts will work with you to
+                create a stunning, responsive website that attracts more
+                customers and increases sales.
               </p>
               <Image
                 src={"/images/prism.png"}

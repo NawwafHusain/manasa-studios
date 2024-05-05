@@ -90,7 +90,7 @@ export default function Contact() {
                 <option value="Web Design">Design package</option>
                 <option value="Web Development">Development Package</option>
                 <option value="Complete">Complete Package</option>
-                <option value="Not Sure">I&quot;m not sure</option>
+                <option value="Not Sure">I&apos;m not sure</option>
               </select>
             </div>
             <input
