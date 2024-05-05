@@ -157,7 +157,7 @@ export default function Hero() {
           >
             <div className="absolute flex-1 w-full h-full top-0 left-0 px-4 pt-4 pb-6 xl:p-8 text-white rounded-3xl ">
               <h2 className="xl:text-3xl text-xl lg:text-[3rem] lg:mt-8 lg:mb-8">
-                Web Design + Developement
+                Web Design + Development
                 <br />
               </h2>
               <p className="text-[0.8rem] xl:text-md lg:text-[1.75rem] font-light">
