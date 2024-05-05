@@ -41,7 +41,7 @@ export default function Services() {
           </div>
 
           <div className="w-full mx-2 border-2 border-white rounded-xl p-4 mt-2">
-            <h2>What's included in this package?</h2>
+            <h2>What&apos;s included in this package?</h2>
             <p className="font-thin text-md">
               The Design package includes the following:
             </p>
@@ -113,7 +113,7 @@ export default function Services() {
             </p>
           </div>
           <div className="w-full mx-2 border-2 border-white rounded-xl p-4 mt-2">
-            <h2>What's included in this package?</h2>
+            <h2>What&apos;s included in this package?</h2>
             <p className="font-thin text-md">
               The developmenmt package includes the following:
             </p>
@@ -193,7 +193,7 @@ export default function Services() {
           </div>
 
           <div className="w-full mx-2 border-2 border-white rounded-xl p-4 mt-2">
-            <h2>What's included in this package?</h2>
+            <h2>What&apos;s included in this package?</h2>
             <p className="font-thin text-md">
               The complete package includes the following:
             </p>
@@ -247,14 +247,14 @@ export default function Services() {
       <div className="w-full flex flex-col justify-center items-center mt-24">
         <div className="flex-1 text-center justify-center items-center flex flex-col">
           <h1 className="text-5xl">
-            Upgrade Your Social Media Presence <br /> With the "Social Media
-            Managment" Add-on.
+            Upgrade Your Social Media Presence <br /> With the &quot;Social
+            Media Managment&quot; Add-on.
           </h1>
           <p className="w-[70%] text-xl align-middle self-center mt-5 font-thin">
             Choose from a range of packages that best suits you. Our partner
-            "Medaba Media" is offering special rates to all Manasa Studios
-            Clients. Super set your stunning website with an social media
-            presence to match!
+            &quot;Medaba Media&quot; is offering special rates to all Manasa
+            Studios Clients. Super set your stunning website with an social
+            media presence to match!
           </p>
         </div>
         <div className="flex-2 flex flex-col mt-20 xl:w-[70%] xl:px-0 px-7">
