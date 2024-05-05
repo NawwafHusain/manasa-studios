@@ -3,45 +3,55 @@ import { NextResponse } from "next/server";
 
 const email = process.env.EMAIL;
 const pass = process.env.PASSWORD;
+const res = process.env.RES;
 
-function sendEmail(emailBody) {
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: email,
-      pass: pass,
-    },
-  });
+async function sendEmail(data) {
+  return new Promise((resolve, reject) => {
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: email,
+        pass: pass,
+      },
+    });
 
-  const mailOptions = {
-    from: email,
-    to: email,
-    subject: "Manasa Academy: contact request",
-    text: emailBody,
-    html: `<h1> New Contact Request </h1>
-    <p> Please Scedule a call with ${emailBody}</p>`,
-  };
-
-  transporter.sendMail(mailOptions, function (error, info) {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log("Email sent: " + info.response);
-    }
+    const mailOptions = {
+      from: email,
+      to: res,
+      subject: "Manasa Academy: contact request",
+      text: data,
+      html: `<h1> New Contact Request </h1>
+    <p> ${data.name} is intreseted in the ${service} package </p>
+    <p> Email: ${data.email} </p>`,
+    };
+    console.log(mailOptions, "inside sendEmail");
+    transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        console.log(error);
+        reject(error);
+      } else {
+        console.log("Email sent: " + info.response);
+        resolve(info.response);
+      }
+    });
   });
 }
 
 export async function POST(req) {
   try {
-    const body = await req.json();
-
-    const { email } = body;
-    if (!email || email == "") {
+    console.log(JSON(req.body), "here");
+    if (!body.email || body.email == "") {
       throw error("Email is required");
     }
 
-    sendEmail(email);
-    return NextResponse.json({ status: 200, body: { message: "email sent" } });
+    await sendEmail(body);
+
+    return new NextResponse(JSON.stringify({ error: "Email is required" }), {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   } catch (error) {
     return new NextResponse({ status: 500, body: { error: error.message } });
   }

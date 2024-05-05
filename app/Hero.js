@@ -60,9 +60,16 @@ export default function Hero() {
     { scope: root }
   );
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <section
-      className="flex w-full lg:h-[100vh] h-[100vh] pt-28 lg:box-border justify-center relative lg:gap-0 gap-4 lg:px-0 lg:items-stretch right-2"
+      className="flex w-full xl:h-[100vh] h-[100vh] pt-28 xl:box-border justify-center relative xl:gap-0 gap-4 xl:px-0 xl:items-stretch right-2"
       ref={root}
       id="hero"
     >
@@ -82,20 +89,20 @@ export default function Hero() {
       </svg>
       {/* wigglyt div desktop */}
       <div
-        className="lg:w-80 w-40  flex-1 card rounded-3xl mt-4 bottom-3 relative lg:flex flex-col card-wave lg:right-10 lg:ml-10 translate-x-[0%]  hidden"
+        className="xl:w-80 w-40  flex-1 card rounded-3xl mt-4 bottom-3 relative xl:flex flex-col card-wave xl:right-10 xl:ml-10 translate-x-[0%]  hidden"
         ref={(e) => {
           card.current[0] = e;
         }}
         style={{ clipPath: "url(#clip-path)" }}
       >
-        <h1 className="lg:text-[4.7rem]  text-xl lg:leading-[1.19em] leading-[2.5em] text-white mt-5 lg:ml-9 ml-4  ">
+        <h1 className="xl:text-[4.7rem]  text-xl xl:leading-[1.19em] leading-[2.5em] text-white mt-5 xl:ml-9 ml-4  ">
           Web <br /> Design + <br />
           Developement
           <br />
         </h1>
-        <ul className="lg:ml-9 ml-4 lg:text-4xl text-md  mt-10 text-white font-light xxl:text-black">
+        <ul className="xl:ml-9 ml-4 xl:text-4xl text-md  mt-10 text-white font-light xxl:text-black">
           <li>- Web Design</li>
-          <li className="w-[90%] lg:w-auto">- Web Development</li>
+          <li className="w-[90%] xl:w-auto">- Web Development</li>
           <li>- SEO</li>
           <li>- Branding</li>
         </ul>
@@ -103,17 +110,24 @@ export default function Hero() {
           src={"/images/prism.png"}
           width={650}
           height={650}
-          className="absolute -bottom-[9rem] -left-[6rem] -z-10 lg:opacity-60 opacity-60  h-[100%]  min-w-[100%]  object-cover"
+          className="absolute -bottom-[9rem] -left-[6rem] -z-10 xl:opacity-60 opacity-60  h-[100%]  min-w-[100%]  object-cover"
           alt="3D prism background"
         />
       </div>
-
+      {/* <div className="xl:w-[38vw] lg:w-[50vw] relative h-[98%]">
+        <div className="wiggle1"></div>
+        <div className="wiggle2"></div>
+        <div className="wiggle3"></div>
+        <div className="wiggle4"></div>
+        <div className="wiggle5"></div>
+        <div className="wiggle6"></div>
+      </div> */}
       {/*right side of screen */}
       <Suspense fallback={<MainTitle />}></Suspense>
-      <div className="flex flex-col flex-nowrap lg:flex-1 lg:w-auto w-full ">
-        <div className="flex flex-col lg:w-min lg:items-end h-min text-center lg:mt-5 mt-2">
+      <div className="flex flex-col flex-nowrap xl:flex-1 xl:w-auto w-full lg:w-[50vw] ">
+        <div className="flex flex-col xl:w-min xl:items-end h-min text-center xl:mt-5 mt-2 lg:w-[50vw]">
           <h1
-            className="lg:text-[12.25rem]  text-[5rem] text-white leading-none lg:tracking-[.15em] xl:tracking-[.18em]  lg:absolute lg:-right-[.15em]  translate-x-[100%]  opacity-0"
+            className="xl:text-[12.25rem]  text-[5rem] text-white leading-none xl:tracking-[.15em]  lg:text-[12.5rem]  xl:absolute xl:-right-[.15em]  translate-x-[100%]  opacity-0"
             ref={(e) => {
               title.current[0] = e;
             }}
@@ -121,7 +135,7 @@ export default function Hero() {
             MANASA
           </h1>
           <h1
-            className="lg:text-[12.25rem] text-[5rem] text-white leading-none lg:tracking-wide lg:w-min lg:h-min lg:mt-40 lg:mr-0  translate-x-[100%]  opacity-0"
+            className="xl:text-[12.25rem] text-[5rem] text-white leading-none xl:tracking-wide lg:text-[12.5rem] xl:w-min xl:h-min xl:mt-40 xl:mr-0  translate-x-[100%]  opacity-0"
             ref={(e) => {
               title.current[1] = e;
             }}
@@ -130,21 +144,21 @@ export default function Hero() {
           </h1>
         </div>
 
-        <div className="lg:flex lg:gap-8 gap-2 flex-1 relative bottom-3 lg:flex-row flex-col mt-5 lg:mt-2 flex ">
+        <div className="xl:flex xl:gap-8 gap-2 flex-1 relative bottom-3 xl:flex-row flex-col mt-5 xl:mt-2 flex ">
           {/*mobile wiggly div */}
           <div
-            className="card flex-auto lg:w-[9rem] rounded-3xl overflow-clip lg:hidden "
+            className="card flex-auto xl:w-[9rem] rounded-3xl overflow-clip xl:hidden "
             ref={(e) => {
               card.current[1] = e;
             }}
           >
-            <div className="absolute flex-1 w-full h-full top-0 left-0 p-4 lg:p-8 text-white rounded-3xl ">
-              <h2 className="lg:text-3xl text-xl">
-                Web Design + <br />
+            <div className="absolute flex-1 w-full h-full top-0 left-0 p-4 xl:p-8 text-white rounded-3xl ">
+              <h2 className="xl:text-3xl text-xl lg:text-[3rem] lg:mt-8 lg:mb-8">
+                Web Design + <br className="xl:block lg:hidden" />
                 Developement
                 <br />
               </h2>
-              <p className="text-[0.8rem] lg:text-md font-light">
+              <p className="text-[0.8rem] xl:text-md lg:text-[1.75rem] font-light">
                 Bespoke web design and development that breathes life into your
                 brand.
               </p>
@@ -152,23 +166,23 @@ export default function Hero() {
                 src={"/images/prism.png"}
                 width={650}
                 height={650}
-                className="absolute -top-0 -left-20 -z-10 lg:opacity-60 opacity-60  h-[100%]    object-cover"
+                className="absolute -top-0 -left-20 -z-10 xl:opacity-60 opacity-60  h-[100%]    object-cover"
                 alt="blobs Background"
               />
             </div>
           </div>
           <div
-            className="card flex-auto lg:w-[9rem] rounded-3xl overflow-clip "
+            className="card flex-auto xl:w-[9rem] rounded-3xl overflow-clip "
             ref={(e) => {
               card.current[2] = e;
             }}
           >
-            <div className="absolute flex-1 w-full h-full top-0 left-0 p-4 lg:p-8 text-white rounded-3xl ">
-              <h2 className="lg:text-3xl">
+            <div className="absolute flex-1 w-full h-full top-0 left-0 p-4 xl:p-8 text-white rounded-3xl ">
+              <h2 className="xl:text-3xl lg:text-[3rem] lg:mt-2 lg:mb-4">
                 Crafting Digital <br />
                 Experiences
               </h2>
-              <p className="text-[0.8rem] lg:text-md font-light">
+              <p className="text-[0.8rem] xl:text-[1.2rem] lg:text-[1.75rem] font-light">
                 Bespoke web design and development that breathes life into your
                 brand.
               </p>
@@ -176,7 +190,7 @@ export default function Hero() {
                 src={"/images/blobsRot.png"}
                 width={650}
                 height={650}
-                className="absolute -top-0 -right-20 -z-10 lg:opacity-60 opacity-60  h-[100%]    object-cover"
+                className="absolute -top-0 -right-20 -z-10 xl:opacity-60 opacity-60  h-[100%]    object-cover"
                 alt="blobs Background"
               />
             </div>
@@ -187,15 +201,20 @@ export default function Hero() {
               card.current[3] = e;
             }}
           >
-            <div className="absolute flex-1 w-full h-full top-0 left-0 p-4 lg:p-8 text-white rounded-3xl ">
-              <h2 className="lg:text-3xl sm:block hidden">
+            <div
+              className="absolute flex-1 w-full h-full top-0 left-0 p-4 xl:p-8 text-white rounded-3xl "
+              onClick={() => {
+                scrollToSection("contact");
+              }}
+            >
+              <h2 className="xl:text-3xl sm:block hidden lg:text-[3rem] lg:mt-2 lg:mb-4">
                 Let&apos;s Build <br />
                 Together
               </h2>
-              <h2 className="lg:text-3xl sm:hidden ">
+              <h2 className="xl:text-3xl sm:hidden ">
                 Let&apos;s Build Together
               </h2>
-              <p className="text-[0.8rem] lg:text-md font-light">
+              <p className="text-[0.8rem] xl:text-[1.2rem] lg:text-[1.75rem] font-light">
                 Start your journey with us today and elvate your digital
                 presence
               </p>
@@ -203,7 +222,7 @@ export default function Hero() {
                 src={"/images/purpleWave.png"}
                 width={450}
                 height={450}
-                className="absolute -top-0 -right-0 -z-10 lg:opacity-60 opacity-60  h-[100%]    object-cover"
+                className="absolute -top-0 -right-0 -z-10 xl:opacity-60 opacity-60  h-[100%]    object-cover"
                 alt="Purple wave background"
               />
             </div>

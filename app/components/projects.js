@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Projects() {
   return (
     <section
-      className="lg:pt-40 pt-10 px-4 relative  overflow-x-clip"
+      className="lg:pt-40 pt-20 px-4 relative  overflow-x-clip"
       id="projects"
     >
       <h1 className="text-white text-6xl text-center lg:text-left lg:text-7xl">

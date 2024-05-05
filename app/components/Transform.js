@@ -50,7 +50,7 @@ export default function Transform() {
   const image = useRef();
   return (
     <section
-      className="lg:pt-40 pt-10 px-4 relative  min-h-[100vh] overflow-x-clip"
+      className="lg:pt-40 pt-10 px-4 relative  lg:min-h-[100vh] overflow-x-clip"
       ref={root}
     >
       <div className="text-white">
@@ -95,9 +95,9 @@ export default function Transform() {
       </div>
       <Image
         src={"/images/landscape.png"}
-        width={1200}
-        height={1200}
-        className="absolute lg:top-[21%] top-[35%] lg:-right-80 -z-10 opacity-40 lg:opacity-100 translate-x-0 -right-[50%] lg:scale-100 scale-[1.9]"
+        width={800}
+        height={800}
+        className="absolute lg:top-[30%] top-[35%] lg:-right-[5rem] -z-10 opacity-40 lg:opacity-100 translate-x-0 -right-[50%] lg:scale-100 scale-[1.9]"
         alt="landscape"
         ref={image}
       />

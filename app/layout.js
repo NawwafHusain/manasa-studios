@@ -14,8 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      {/*The fixed height here is to allow for the Nav to be sticky */}
       <body
-        className={`${josefin_Sans.className} relative lg:h-[700vh] h-[900vh] overflow-x-clip`}
+        className={`${josefin_Sans.className} relative xl:h-[825vh] min-h-[700vh] overflow-x-clip`}
       >
         <Toaster
           position="top-center"

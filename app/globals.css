@@ -104,3 +104,68 @@ cursor: pointer;
 
 
 
+.wiggle1{
+  height: 100%;
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top:0;
+  left:0;
+  border-radius: 3vw 3vw 3vw 3vw;
+}
+
+.wiggle2{
+  
+  position: absolute;
+  width: 25%;
+  height: 90%;
+  left: calc(25% + 3vw);
+  bottom:0;
+  background-color: rgb(255, 255, 255);
+  -webkit-mask-image: radial-gradient(circle 10px at 100% 0, transparent 0, transparent 3vw, black 21px);
+
+
+}
+
+.wiggle3{
+  height: calc(90% - 3vw);
+  width: 20%;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom:0;
+  left:50%;
+  border-radius: 3vw 3vw 0 0;
+}
+
+.wiggle4{
+  height: calc(90% - 3vw);
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom:0;
+  left:25%;
+  border-radius: 3vw 3vw 3vw 3vw;
+}
+
+.wiggle5{
+  
+  position: absolute;
+  width: 25%;
+  height: calc(80% - 2vw);
+  left: calc(50% + 3vw);
+  bottom:0;
+  background-color: rgb(255, 255, 255);
+  -webkit-mask-image: radial-gradient(circle 10px at 100% 0, transparent 0, transparent 3vw, black 21px);
+
+
+}
+
+.wiggle6{
+  height: calc(80% - 5vw);
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom:0;
+  left:48%;
+  border-radius: 3vw 3vw 3vw 3vw;
+}
