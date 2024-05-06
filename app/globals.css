@@ -213,7 +213,11 @@ cursor: pointer;
     cursor: auto;
   }
 
-  .mousefollow .mousefollow2{
+  .mousefollow {
+    opacity: 0;
+  }
+
+  .mousefollow2{
     opacity: 0;
   }
 }
