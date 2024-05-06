@@ -147,14 +147,14 @@ export default function Services() {
           <div className="flex gap-2 lg:flex-row flex-col">
             <div className="flex gap-2">
               <p className="text-lg">from $</p>
-              <p className="text-6xl">23</p>
+              <p className="text-6xl">35</p>
               <p className="text-lg self-end -translate-x-2">/mo</p>
             </div>
 
             <p className="self-center lg:text-md">or</p>
             <div className="flex gap-2">
               <p className="text-lg">from $</p>
-              <p className="text-6xl">250</p>
+              <p className="text-6xl">500</p>
               <p className="text-lg self-end -translate-x-2">/yr</p>
             </div>
           </div>
@@ -233,14 +233,14 @@ export default function Services() {
           <div className="flex gap-2 lg:flex-row flex-col">
             <div className="flex gap-2">
               <p className="text-lg">from $</p>
-              <p className="text-6xl">23</p>
+              <p className="text-6xl">35</p>
               <p className="text-lg self-end -translate-x-2">/mo</p>
             </div>
 
             <p className="self-center lg:text-md">or</p>
             <div className="flex gap-2">
               <p className="text-lg">from $</p>
-              <p className="text-6xl">250</p>
+              <p className="text-6xl">500</p>
               <p className="text-lg self-end -translate-x-2">/yr</p>
             </div>
           </div>

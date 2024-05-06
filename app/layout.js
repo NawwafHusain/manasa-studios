@@ -3,6 +3,7 @@ import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/nav";
 import { Toaster } from "react-hot-toast";
+import Mousefollow from "./components/MouseFollow";
 
 const josefin_Sans = Josefin_Sans({ subsets: ["latin"] });
 
@@ -34,9 +35,10 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        <container className="overflow-x-clip relative xl:w-screen max-w-[1920px] w-max xl:h-[850vh] h-[1100vh] min-w-[360px] flex flex-col items-center">
+        <container className="overflow-x-clip relative xl:w-screen max-w-[1920px] w-max xl:h-[800vh] h-[1100vh] min-w-[360px] flex flex-col items-center">
           <Nav />
           {children}
+          <Mousefollow />
         </container>
       </body>
     </html>

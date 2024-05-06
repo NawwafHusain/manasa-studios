@@ -113,7 +113,10 @@ export default function Hero() {
           className="absolute -bottom-[9rem] -left-[6rem] -z-10 xl:opacity-60 opacity-60  h-[100%]  min-w-[100%]  object-cover"
           alt="3D prism background"
         />
-        <div className="absolute bottom-[2rem] right-[2rem] bg-black text-white rounded-lg px-6 py-3 cursor-pointer">
+        <div
+          onClick={() => scrollToSection("services")}
+          className="absolute bottom-[2rem] right-[2rem] bg-transparent text-white border-white border-2 hover:bg-white hover:text-black rounded-full px-6 py-3 cursor-pointer"
+        >
           View Our Packages
         </div>
       </div>
@@ -181,7 +184,7 @@ export default function Hero() {
               card.current[2] = e;
             }}
           >
-            <div className="absolute flex-1 w-full h-full top-0 left-0 p-4 xl:p-8 text-white rounded-3xl ">
+            <div className="absolute flex-1 w-full h-full top-0 left-0 p-4 xl:p-8 text-white rounded-3xl curser-normal">
               <h2 className="xl:text-3xl lg:text-[3rem] lg:mt-2 lg:mb-4">
                 Crafting Digital <br />
                 Experiences
@@ -229,6 +232,12 @@ export default function Hero() {
                 className="absolute -top-0 -right-0 -z-10 xl:opacity-60 opacity-60  h-[100%]    object-cover"
                 alt="Purple wave background"
               />
+              <div
+                onClick={() => scrollToSection("contact")}
+                className="absolute bottom-[2rem] right-[2rem] bg-transparent text-white border-white border-2  hover:bg-white hover:text-black rounded-full px-6 py-3 cursor-pointer"
+              >
+                Get in Touch
+              </div>
             </div>
           </div>
         </div>
