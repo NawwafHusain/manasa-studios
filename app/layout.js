@@ -19,6 +19,9 @@ export default function RootLayout({ children }) {
       <head>
         <title>{metadata.title}</title>
         <link rel="icon" href="/images/LogoBlack.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={metadata.description} />
+        <meta name="name" content="manasa studios" />
       </head>
       <body
         className={`${josefin_Sans.className} relative h-max grid grid-cols-1 justify-items-center w-screen overflow-x-clip`}

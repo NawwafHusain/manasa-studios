@@ -208,6 +208,15 @@ cursor: pointer;
   z-index: 10;
 }
 
+.masking{
+  position: absolute;
+  mask-image: url("/images/Ellipse.svg");
+  background: white;
+  mask-repeat: no-repeat;
+  mask-size: 300px;
+  
+}
+
 @media only screen and (max-width: 600px) {
   body {
     cursor: auto;
@@ -219,5 +228,9 @@ cursor: pointer;
 
   .mousefollow2{
     opacity: 0;
+  }
+
+  .titleFollow{
+    position: hidden;
   }
 }

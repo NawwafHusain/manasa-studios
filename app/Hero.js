@@ -1,18 +1,43 @@
 "use client";
 import React, { Suspense } from "react";
 import Image from "next/image";
-import { useRef, useEffect, useLayoutEffect } from "react";
+import { useRef, useEffect, useLayoutEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import MainTitle from "./components/mainTitle";
+import { Kufam } from "next/font/google";
+import { Noto_Nastaliq_Urdu } from "next/font/google";
+const kufam = Kufam({ subsets: ["latin"] });
+const noto = Noto_Nastaliq_Urdu({ subsets: ["latin"] });
 
 export default function Hero() {
+  const [point, setPoint] = useState({ x: 0, y: 0 });
+  const { x, y } = point;
   gsap.registerPlugin(ScrollTrigger);
 
   const card = useRef([]);
   const title = useRef([]);
   const root = useRef();
+  const titleMask = useRef();
+
+  useEffect(() => {
+    if (!titleMask.current) return;
+
+    const handlePointerMove = ({ clientX, clientY }) => {
+      const element = titleMask.current;
+      setPoint({
+        x: clientX - element.offsetLeft - 150,
+        y: clientY - element.offsetTop - 150,
+      });
+    };
+
+    window.addEventListener("pointermove", handlePointerMove);
+
+    return () => {
+      window.removeEventListener("pointermove", handlePointerMove);
+    };
+  }, []);
 
   useGSAP(
     () => {
@@ -30,6 +55,26 @@ export default function Hero() {
         duration: 1,
         stagger: 0.1,
         x: 0,
+        ease: "power4.out",
+        delay: 0,
+        opacity: 1,
+        marginLeft: 0,
+        touchAction: "play reverse play reverse",
+      });
+
+      gsap.to(titleMask.current, {
+        scrollTrigger: {
+          trigger: root.current,
+          start: "top 20%",
+          end: "100% 50%",
+
+          //markers: true,
+          toggleActions: "play reverse play reverse",
+        },
+        duration: 1,
+        stagger: 0.1,
+        x: 0,
+        maskSize: "300px",
         ease: "power4.out",
         delay: 0,
         opacity: 1,
@@ -66,7 +111,8 @@ export default function Hero() {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
-
+  //مناسا
+  //ستوديوس
   return (
     <section
       className=" flex w-full xl:h-[100vh] h-[100vh] pt-28 xl:box-border justify-center relative xl:gap-0 gap-4 xl:px-0 xl:items-stretch right-2 px-8"
@@ -140,6 +186,7 @@ export default function Hero() {
           >
             MANASA
           </h1>
+
           <h1
             className="xl:text-[12.5vw] xxl:text-[12.5rem] text-[17vw] text-white leading-none xl:tracking-[0.55vw] xxl:tracking-[1.65vw] lg:text-[12.5rem] xl:w-min xl:h-min xl:mt-40 xl:mr-0  translate-x-[100%]  opacity-0 text-justify"
             ref={(e) => {
@@ -147,6 +194,20 @@ export default function Hero() {
             }}
           >
             STUDIOS
+          </h1>
+        </div>
+        <div
+          ref={titleMask}
+          style={{ maskPosition: `${x}px ${y}px` }}
+          className={`${noto.className} lg:flex flex-col xl:w-max xl:items-end h-min text-center pb-40 pr-[20rem] pl-[10rem] mt-2 lg:w-[50vw] absolute masking hidden -translate-y-10 translate-x-[100%] overflow-visible`}
+        >
+          <div className="absolute -left-[10vw] w-[10vw] bg-white h-full" />
+          <h1 className="xl:text-[10vw] xxl:text-[12.5rem]  text-[17vw] text-black leading-none   lg:text-[12.5rem] xl:right-[13vw]  xl:absolute  ">
+            مناسا
+          </h1>
+
+          <h1 className="xl:text-[12.5vw] xxl:text-[12.5rem] text-[17vw] text-black leading-none   lg:text-[12.5rem] xl:w-max xl:h-max xl:mt-[7.5rem] pb-10rem xl:mr-0 -translate-x-[10vw] ">
+            ستوديوس
           </h1>
         </div>
 
