@@ -63,7 +63,7 @@ export default function Nav2() {
   }, [isOpened]);
 
   useGSAP(() => {
-    const isMobile = window.innerWidth <= 1024; // assuming 1024px is your ipad breakpoint
+    const isMobile = window.innerWidth <= 1200; // assuming 1024px is your ipad breakpoint
 
     gsap.to(navRef.current, {
       y: 0,

@@ -13,7 +13,9 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       screens: {
-        xxl: { min: "1920px" }, // this is to support your 23". Make sure your 15.6" screen is less than the min px value passed here
+        xxl: { min: "1920px" },
+        xl: "1100px",
+        // this is to support your 23". Make sure your 15.6" screen is less than the min px value passed here
       },
     },
   },
