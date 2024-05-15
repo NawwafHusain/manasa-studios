@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        <container className="overflow-x-clip relative xl:w-screen max-w-[1920px] w-max xl:h-[800vh] h-[1100vh] min-w-[360px] flex flex-col items-center">
+        <container className="overflow-x-clip relative xl:w-screen max-w-[1920px] w-max xl:h-[800vh] xxl:h-[650vh] h-[1100vh] min-w-[360px] flex flex-col items-center">
           <Nav />
           {children}
           <Mousefollow />

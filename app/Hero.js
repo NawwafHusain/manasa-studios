@@ -146,7 +146,7 @@ export default function Hero() {
           Development
           <br />
         </h1>
-        <ul className="xl:ml-9 ml-4 xl:text-4xl text-md  mt-10 text-white font-light xxl:text-black">
+        <ul className="xl:ml-9 ml-4 xl:text-4xl text-md  mt-10 text-white font-light xxl:text-white">
           <li>- Web Design</li>
           <li className="w-[90%] xl:w-auto">- Web Development</li>
           <li>- SEO</li>
@@ -202,7 +202,7 @@ export default function Hero() {
           className={`${noto.className} lg:flex flex-col xl:w-max xl:items-end h-min text-center pb-40 pr-[20rem] pl-[10rem] mt-2 lg:w-[50vw] absolute masking hidden -translate-y-10 translate-x-[100%] overflow-visible`}
         >
           <div className="absolute -left-[10vw] w-[10vw] bg-white h-full" />
-          <h1 className="xl:text-[10vw] xxl:text-[12.5rem]  text-[17vw] text-black leading-none   lg:text-[12.5rem] xl:right-[13vw]  xl:absolute  ">
+          <h1 className="xl:text-[10vw] xxl:text-[12.5rem]  text-[17vw] text-black leading-none xxl:right-[5vw]   lg:text-[12.5rem] xl:right-[13vw]  xl:absolute  ">
             مناسا
           </h1>
 
@@ -290,7 +290,7 @@ export default function Hero() {
                 src={"/images/purpleWave.png"}
                 width={450}
                 height={450}
-                className="absolute -top-0 -right-0 -z-10 xl:opacity-60 opacity-60  h-[100%]    object-cover"
+                className="absolute -top-0 -right-0 -z-10 xl:opacity-60 opacity-60  h-[100%] xxl:scale-[1.2]  object-cover"
                 alt="Purple wave background"
               />
               <div

@@ -213,7 +213,7 @@ cursor: pointer;
   mask-image: url("/images/Ellipse.svg");
   background: white;
   mask-repeat: no-repeat;
-  mask-size: 300px;
+  mask-size: 0;
   
 }
 

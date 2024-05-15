@@ -68,7 +68,7 @@ export default function Projects() {
       >
         Projects
       </h1>
-      <div className="flex lg:flex-wrap flex-col gap-4 flex-1 min-h-[70rem] lg:max-h-[90rem] lg:mt-0 mt-5">
+      <div className="flex lg:flex-wrap flex-col gap-4 flex-1 min-h-[70rem] lg:max-h-[90rem] xxl:min-h-0 lg:mt-0 mt-5 xxl:flex-row xxl:flex-nowrap">
         <div
           ref={(e) => {
             card.current[0] = e;
@@ -91,7 +91,7 @@ export default function Projects() {
           </h1>
           <div className="w-full h-[20rem]"></div>
         </div>
-        <div
+        {/* <div
           ref={(e) => {
             card.current[1] = e;
           }}
@@ -108,7 +108,7 @@ export default function Projects() {
             className="object-cover object-top hover:object-bottom transition-all duration-500 hover:cursor-default "
             alt="tweleve logo"
           />
-        </div>
+        </div> */}
         <div
           ref={(e) => {
             card.current[2] = e;

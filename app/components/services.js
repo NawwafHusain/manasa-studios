@@ -41,10 +41,11 @@ export default function Services() {
           toggleActions: "play reverse play reverse",
         },
         duration: 1,
-        x: 0,
+        y: 0,
+        delay: 0.1 * i,
         opacity: 1,
         ease: "power1.inOut",
-        stagger: 0.2,
+        stagger: 0.5,
         touchAction: "play reverse play reverse",
       });
     });
@@ -64,7 +65,7 @@ export default function Services() {
           ref={(e) => {
             card.current[0] = e;
           }}
-          className="opacity-0 cards p-5 shadow-white h-max xl:flex-1 lg:w-full  md:w-[60%] w-[90%] rounded-3xl flex flex-col  items-center lg:row-span-1 "
+          className="opacity-0 cards p-5 shadow-white h-max xl:flex-1 lg:w-full  md:w-[60%] w-[90%] rounded-3xl flex flex-col  items-center lg:row-span-1 translate-y-48"
         >
           <div className="flex items-center gap-4 mb-7 ml-3 w-full">
             <div className="rounded-full  border-white border-2 p-2">
@@ -121,7 +122,7 @@ export default function Services() {
           ref={(e) => {
             card.current[1] = e;
           }}
-          className="opacity-0 cards p-5 h-max xl:flex-1 lg:w-full  md:w-[60%] w-[90%] rounded-3xl flex flex-col  items-center lg:row-start-1 lg:row-end-2 "
+          className="opacity-0 cards p-5 h-max xl:flex-1 lg:w-full  md:w-[60%] w-[90%] rounded-3xl flex flex-col  items-center lg:row-start-1 lg:row-end-2  translate-y-48"
         >
           <div className="flex items-center gap-4 w-full mb-7 ml-3">
             <div className=" rounded-full border-white border-2 p-2">
@@ -207,7 +208,7 @@ export default function Services() {
           ref={(e) => {
             card.current[2] = e;
           }}
-          className="opacity-0 cards p-5 h-max xl:flex-1 lg:w-full  md:w-[60%] w-[90%] rounded-3xl flex flex-col  items-center lg:row-start-2 align-top xl:mt-0 lg:-mt-8"
+          className="opacity-0 cards p-5 h-max xl:flex-1 lg:w-full  md:w-[60%] w-[90%] rounded-3xl flex flex-col  items-center lg:row-start-2 align-top xl:mt-0 lg:-mt-8 translate-y-48"
         >
           <div className="flex items-center gap-4 w-full mb-7 ml-3">
             <div className="rounded-full border-white border-2 p-2">

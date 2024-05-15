@@ -95,9 +95,9 @@ export default function Transform() {
       </div>
       <Image
         src={"/images/landscape.png"}
-        width={800}
-        height={800}
-        className="absolute lg:top-[30%] top-[35%] lg:-right-[5rem] -z-10 opacity-40 lg:opacity-100 translate-x-0 -right-[50%] lg:scale-100 scale-[1.9]"
+        width={1200}
+        height={1200}
+        className="absolute lg:top-[20%] top-[35%] lg:-right-[20vw] -z-10 opacity-40 lg:opacity-100 translate-x-0 -right-[50%] lg:scale-100 scale-[1.9] xxl:scale-[1.2] "
         alt="landscape"
         ref={image}
       />
