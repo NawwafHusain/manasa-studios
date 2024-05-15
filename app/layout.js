@@ -1,7 +1,7 @@
 //192.168.0.135
 import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
-import Nav from "./components/nav";
+import Nav2 from "./components/nav2";
 import { Toaster } from "react-hot-toast";
 import Mousefollow from "./components/MouseFollow";
 
@@ -38,8 +38,8 @@ export default function RootLayout({ children }) {
           }}
         />
 
-        <container className="overflow-x-clip relative xl:w-screen max-w-[1920px] w-max xl:h-[800vh] xxl:h-[650vh] h-[1100vh] min-w-[360px] flex flex-col items-center">
-          <Nav />
+        <container className="overflow-x-clip relative xl:w-screen max-w-[1920px] w-max xl:h-[800vh] xxl:h-[650vh] h-[1100vh] min-w-[360px] md:w-screen flex flex-col items-center">
+          <Nav2 />
           {children}
           <Mousefollow />
         </container>

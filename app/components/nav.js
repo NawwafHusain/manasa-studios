@@ -25,8 +25,9 @@ export default function Nav() {
         delay: 0.5,
         opacity: 1,
       });
-      console.log(isMobile);
-
+      {
+        /*sizing scrollTrigger */
+      }
       gsap.to(navRef.current, {
         scrollTrigger: {
           trigger: triggerRef.current,
@@ -38,6 +39,7 @@ export default function Nav() {
           toggleActions: "play none none reverse",
           ease: "power1.inOut",
         },
+
         backdropFilter: "blur(100px)",
         width: isMobile ? "100%" : "50%",
       });
@@ -87,35 +89,15 @@ export default function Nav() {
       >
         <div
           className={`w-full lg:h-20 h-full rounded-[3rem] nav flex justify-between  items-center
-           px-10 sticky z-60 transition-all duration-500 `}
+           pr-10 pl-4 sticky z-60 transition-all duration-500 `}
           ref={navRef}
         >
+          {/*mobile list*/}
           <div
             className={`w-full ${
               isOpened ? "h-[97vh] bg-white" : "h-0 bg-transparent"
-            } absolute top-0 left-0 px-4 rounded-[2rem] transition-all duration-500 z-20 overflow-clip flex flex-col justify-between`}
+            } absolute top-0 left-0 pr-4 z-0 rounded-[2rem] transition-all duration-500  overflow-clip flex flex-col justify-between`}
           >
-            <div
-              className={`w-full h-20 rounded-[3rem]  flex justify-between  items-center
-           px-6 z-60 transition-all duration-500 `}
-              ref={navRef}
-            >
-              <Image
-                src="/images/LogoBlack.png"
-                width={80}
-                height={66}
-                className="object-contain"
-                alt="Manasa Studios Logo white version"
-              />
-              <Image
-                src="/images/close.png"
-                width={40}
-                height={40}
-                className="object-contain lg:hidden"
-                onClick={() => setIsOpened(!isOpened)}
-                alt="Manasa Studios Logo white version"
-              />
-            </div>
             <ul
               className={`flex flex-col justify-center items-center gap-4 text-3xl font-bold flex-1 `}
             >
@@ -146,25 +128,25 @@ export default function Nav() {
             </ul>
           </div>
           <div
-            className={`nav2 absolute top-0 left-0 rounded-[3rem] h-full w-full flex justify-between lg:items-center px-10 items-center `}
+            className={`nav2 absolute top-0 left-0 rounded-[3rem] h-full w-full flex justify-between lg:items-center pr-10 pl-4 items-center `}
             ref={navTwoRef}
           >
             <Image
-              src="/images/LogoBlack.png"
-              width={80}
+              src="/images/SubMarkBlack.png"
+              width={66}
               height={66}
               className="object-contain"
               alt="Manasa Studios Logo white version"
             />
             <Image
-              src="/images/hamburger.png"
+              src={isOpened ? "/images/close.png" : "/images/hamburger.png"}
               width={40}
               height={40}
               className="object-contain lg:hidden"
               onClick={() => setIsOpened(!isOpened)}
-              alt="Manasa Studios Logo white version"
+              alt="Menu Button"
             />
-
+            {/*Desktop Menu */}
             <ul className="lg:flex gap-2 hidden">
               <li
                 className=" nav-button2 rounded-full flex justify-center items-center"
@@ -193,19 +175,21 @@ export default function Nav() {
             </ul>
           </div>
           <Image
-            src="/images/LogoWhite.png"
-            width={80}
+            src="/images/SubMarkWhite.png"
+            width={66}
             height={66}
             className="object-contain"
-            alt="Manasa Studios Logo white version"
+            alt="Manasa Studios Logo white version  z-"
           />
           <Image
             src="/images/hamburgerWhite.png"
             width={40}
             height={40}
-            className="object-contain lg:hidden"
+            className="object-contain lg:hidden z-"
             alt="Manasa Studios Logo white version "
           />
+
+          {/*desktop Menu */}
           <ul className="lg:flex gap-2 hidden">
             <li
               className=" nav-button rounded-full flex justify-center items-center"

@@ -176,8 +176,9 @@ export default function Hero() {
       </div> */}
       {/*right side of screen */}
       <Suspense fallback={<MainTitle />}></Suspense>
-      <div className="flex flex-col flex-nowrap xl:w-[60vw]  w-full lg:w-[50vw] h-full">
-        <div className="flex flex-col xl:w-min xl:items-end h-min text-center xl:mt-5 mt-2 lg:w-[50vw]">
+      {/* removed lg-[50vw] from here*/}
+      <div className="flex flex-col flex-nowrap xl:w-[60vw] w-full  h-full">
+        <div className="flex flex-col xl:w-min xl:items-end h-min text-center xl:mt-5 mt-2 items-center">
           <h1
             className="xl:text-[12.5vw] xxl:text-[12.5rem]  text-[17vw] text-white leading-none xl:tracking-[2.3vw] xxl:tracking-[3vw]  lg:text-[12.5rem] xl:right-1  xl:absolute  translate-x-[100%]  opacity-0"
             ref={(e) => {
@@ -199,7 +200,7 @@ export default function Hero() {
         <div
           ref={titleMask}
           style={{ maskPosition: `${x}px ${y}px` }}
-          className={`${noto.className} lg:flex flex-col xl:w-max xl:items-end h-min text-center pb-40 pr-[20rem] pl-[10rem] mt-2 lg:w-[50vw] absolute masking hidden -translate-y-10 translate-x-[100%] overflow-visible`}
+          className={`${noto.className} xl:flex flex-col xl:w-max xl:items-end h-min text-center pb-40 pr-[20rem] pl-[10rem] mt-2 lg:w-[50vw] absolute masking hidden -translate-y-10 translate-x-[100%] overflow-visible`}
         >
           <div className="absolute -left-[10vw] w-[10vw] bg-white h-full" />
           <h1 className="xl:text-[10vw] xxl:text-[12.5rem]  text-[17vw] text-black leading-none xxl:right-[5vw]   lg:text-[12.5rem] xl:right-[13vw]  xl:absolute  ">
