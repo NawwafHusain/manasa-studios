@@ -16,7 +16,7 @@ export default function Nav2() {
 
   //useStates
   const [isOpened, setIsOpened] = useState(false);
-  const [logo, setLogo] = useState("/images/SubMarkWhite.png");
+  const [logo, setLogo] = useState("/images/PrimaryWhite.png");
   const [menuButton, setMenuButton] = useState("/images/HamburgerWhite.png");
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -28,7 +28,7 @@ export default function Nav2() {
   useEffect(() => {
     if (isScrolled) {
       setMenuButton("/images/Hamburger.png");
-      setLogo("/images/SubMarkBlack.png");
+      setLogo("/images/PrimaryBlack.png");
 
       for (let i = 0; i < listItemRef.current.length; i++) {
         listItemRef.current[i].style.backgroundColor = "black";
@@ -36,7 +36,7 @@ export default function Nav2() {
       }
     } else {
       setMenuButton("/images/HamburgerWhite.png");
-      setLogo("/images/SubMarkWhite.png");
+      setLogo("/images/PrimaryWhite.png");
 
       for (let i = 0; i < listItemRef.current.length; i++) {
         listItemRef.current[i].style.backgroundColor = "";
@@ -48,16 +48,16 @@ export default function Nav2() {
   useEffect(() => {
     if (isOpened) {
       setMenuButton("/images/close.png");
-      setLogo("/images/SubMarkBlack.png");
+      setLogo("/images/PrimaryBlack.png");
 
       navRef.current.style.background = "white";
     } else if (isScrolled) {
       setMenuButton("/images/Hamburger.png");
-      setLogo("/images/SubMarkBlack.png");
+      setLogo("/images/PrimaryBlack.png");
       navRef.current.style.background = "white";
     } else {
       setMenuButton("/images/HamburgerWhite.png");
-      setLogo("/images/SubMarkWhite.png");
+      setLogo("/images/PrimaryWhite.png");
       navRef.current.style.background = "";
     }
   }, [isOpened]);
@@ -124,7 +124,7 @@ export default function Nav2() {
         <div className="flex items-center justify-between w-full">
           <Image
             src={logo}
-            width={66}
+            width={125}
             height={66}
             className="object-contain"
             alt="Manasa Studios Logo white version"
