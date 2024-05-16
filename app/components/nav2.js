@@ -17,7 +17,7 @@ export default function Nav2() {
   //useStates
   const [isOpened, setIsOpened] = useState(false);
   const [logo, setLogo] = useState("/images/PrimaryWhite.png");
-  const [menuButton, setMenuButton] = useState("/images/HamburgerWhite.png");
+  const [menuButton, setMenuButton] = useState("/images/hamburgerWhite.png");
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleMenu = () => {
@@ -27,7 +27,7 @@ export default function Nav2() {
 
   useEffect(() => {
     if (isScrolled) {
-      setMenuButton("/images/Hamburger.png");
+      setMenuButton("/images/hamburger.png");
       setLogo("/images/PrimaryBlack.png");
 
       for (let i = 0; i < listItemRef.current.length; i++) {
@@ -35,7 +35,7 @@ export default function Nav2() {
         listItemRef.current[i].style.color = "white";
       }
     } else {
-      setMenuButton("/images/HamburgerWhite.png");
+      setMenuButton("/images/hamburgerWhite.png");
       setLogo("/images/PrimaryWhite.png");
 
       for (let i = 0; i < listItemRef.current.length; i++) {
@@ -52,11 +52,11 @@ export default function Nav2() {
 
       navRef.current.style.background = "white";
     } else if (isScrolled) {
-      setMenuButton("/images/Hamburger.png");
+      setMenuButton("/images/hamburger.png");
       setLogo("/images/PrimaryBlack.png");
       navRef.current.style.background = "white";
     } else {
-      setMenuButton("/images/HamburgerWhite.png");
+      setMenuButton("/images/hamburgerWhite.png");
       setLogo("/images/PrimaryWhite.png");
       navRef.current.style.background = "";
     }
