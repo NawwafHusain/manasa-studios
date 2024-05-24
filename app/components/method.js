@@ -82,7 +82,7 @@ export default function Method() {
 
   return (
     <section
-      className="lg:pt-40 pt-12 px-8 lg:px-16 relative mt-16 overflow-x-clip"
+      className="lg:pt-40 pt-12 px-8 lg:px-16 relative xl:mt-16 overflow-x-clip mb-16 "
       id="methadology"
       ref={root}
     >
@@ -232,11 +232,11 @@ export default function Method() {
             ref={(e) => {
               card.current[4] = e;
             }}
-            className="opacity-0   cards w-80 h-[22rem] rounded-3xl relative"
+            className="opacity-0   cards w-80 h-[22rem] rounded-3xl relative "
           >
             <div
               className={
-                "absolute w-full h-full rounded-3xl overflow-clip top-0 left-0"
+                "absolute w-full h-full rounded-3xl overflow-clip top-0 left-0 "
               }
             >
               <Image

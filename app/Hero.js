@@ -135,18 +135,18 @@ export default function Hero() {
       </svg>
       {/* wigglyt div desktop */}
       <div
-        className="xl:w-[35vw] max-h-[100%] w-40  card rounded-3xl mt-4 bottom-3 relative xl:flex flex-col card-wave xl:right-5 xl:ml-10 translate-x-[0%]  hidden"
+        className="xl:w-[35vw] lg:w-[60vw] max-h-[100%] w-40  card rounded-3xl mt-4 bottom-3 relative lg:flex flex-col card-wave xl:right-5 xl:ml-10 translate-x-[0%]  hidden"
         ref={(e) => {
           card.current[0] = e;
         }}
         style={{ clipPath: "url(#clip-path)" }}
       >
-        <h1 className="xl:text-[4.5vw] xxl:text-[5rem]  text-xl xl:leading-[12vh] leading-[2.5em] text-white mt-5 xl:ml-9 ml-4  ">
+        <h1 className="lg:text-[4.5vw] xxl:text-[5rem]  text-xl lg:leading-[11vh] xl:leading-[12vh] leading-[2.5em] text-white mt-5 xl:ml-9 ml-4  ">
           Web <br /> Design + <br />
           Development
           <br />
         </h1>
-        <ul className="xl:ml-9 ml-4 xl:text-4xl text-md  mt-10 text-white font-light xxl:text-white">
+        <ul className="xl:ml-9 ml-4 xl:text-4xl lg:text-[2vw] text-md  mt-10 text-white font-light xxl:text-white">
           <li>- Web Design</li>
           <li className="w-[90%] xl:w-auto">- Web Development</li>
           <li>- SEO</li>
@@ -177,10 +177,11 @@ export default function Hero() {
       {/*right side of screen */}
       <Suspense fallback={<MainTitle />}></Suspense>
       {/* removed lg-[50vw] from here*/}
-      <div className="flex flex-col flex-nowrap xl:w-[60vw] w-full  h-full">
+      <div className="flex flex-col flex-nowrap xl:w-[60vw] w-full  h-full ">
+        {/*title */}
         <div className="flex flex-col xl:w-min xl:items-end h-min text-center xl:mt-5 mt-2 items-center">
           <h1
-            className="xl:text-[12.5vw] xxl:text-[12.5rem]  text-[17vw] text-white leading-none xl:tracking-[2.3vw] xxl:tracking-[3vw]  lg:text-[12.5rem] xl:right-1  xl:absolute  translate-x-[100%]  opacity-0"
+            className="xl:text-[12.5vw] xxl:text-[12.5rem]   text-[17vw] text-white leading-none xl:tracking-[2.3vw] xxl:tracking-[3vw] lg:text-[12vw] xl:right-1  xl:absolute  translate-x-[100%]  opacity-0"
             ref={(e) => {
               title.current[0] = e;
             }}
@@ -189,7 +190,7 @@ export default function Hero() {
           </h1>
 
           <h1
-            className="xl:text-[12.5vw] xxl:text-[12.5rem] text-[17vw] text-white leading-none xl:tracking-[0.55vw] xxl:tracking-[1.65vw] lg:text-[12.5rem] xl:w-min xl:h-min xl:mt-40 xl:mr-0  translate-x-[100%]  opacity-0 text-justify"
+            className="xl:text-[12.5vw] xxl:text-[12.5rem]  text-[17vw] text-white leading-none xl:tracking-[0.55vw] xxl:tracking-[1.65vw] lg:text-[12vw] xl:w-min xl:h-min xl:mt-40 xl:mr-0  translate-x-[100%]  opacity-0 text-justify"
             ref={(e) => {
               title.current[1] = e;
             }}
@@ -212,10 +213,10 @@ export default function Hero() {
           </h1>
         </div>
 
-        <div className="xl:flex xl:gap-8 gap-2 flex-1 relative bottom-3 xl:flex-row flex-col mt-5 xl:mt-2 flex xl:max-h-[50vh]">
+        <div className="xl:flex xl:gap-8 gap-2 flex-1 relative bottom-3 xl:flex-row flex-col  mt-5 xl:mt-2 flex xl:max-h-[50vh]">
           {/*mobile wiggly div */}
           <div
-            className="card flex-auto xl:w-[9rem] rounded-3xl overflow-clip xl:hidden "
+            className="card flex-auto xl:w-[9rem] rounded-3xl overflow-clip lg:hidden "
             ref={(e) => {
               card.current[1] = e;
             }}
@@ -241,7 +242,7 @@ export default function Hero() {
             </div>
           </div>
           <div
-            className="card flex-auto xl:w-[9rem] rounded-3xl overflow-clip "
+            className="card flex-auto xl:w-[9rem] lg:w-[50vw] rounded-3xl overflow-clip "
             ref={(e) => {
               card.current[2] = e;
             }}
@@ -265,7 +266,7 @@ export default function Hero() {
             </div>
           </div>
           <div
-            className="card flex-auto  rounded-3xl overflow-clip "
+            className="card flex-auto lg:w-[50vw] xl:w-auto rounded-3xl overflow-clip "
             ref={(e) => {
               card.current[3] = e;
             }}
@@ -296,7 +297,7 @@ export default function Hero() {
               />
               <div
                 onClick={() => scrollToSection("contact")}
-                className="absolute bottom-[2rem] right-[2rem] bg-transparent text-white border-white border-2  hover:bg-white hover:text-black rounded-full px-6 py-3 cursor-pointer"
+                className="absolute xl:hidden bottom-[2rem] right-[2rem] bg-transparent text-white border-white border-2  hover:bg-white hover:text-black rounded-full px-6 py-3 cursor-pointer"
               >
                 Get in Touch
               </div>

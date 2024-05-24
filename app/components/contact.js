@@ -47,7 +47,7 @@ export default function Contact() {
   };
   return (
     <section
-      className=" px-4 lg:px-16 relative overflow-x-clip xl:h-[100vh] flex justify-center items-center"
+      className=" px-4 lg:px-16 relative overflow-x-clip xl:h-min mt-40 flex justify-center items-center"
       id="contact"
     >
       <div className="w-full lg:h-[40rem] h-[30rem] cards rounded-3xl flex justify-center flex-col items-center lg:gap-8 gap-2 relative ">
