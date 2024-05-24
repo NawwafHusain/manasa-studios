@@ -48,6 +48,7 @@ export default function Projects2() {
     <section
       className="flex flex-col w-[100vw] h-[100vh] relative  xl:mt-0 mt-12 md:mt-64"
       ref={sectionRef}
+      id="projects"
     >
       {/**projects grid */}
       <div className="rotate-12 bg-gradient-to-l projects-flow translate-x-[-10vw] xl:translate-x-[-40vw] opacity-25 xl:opacity-100">
@@ -254,7 +255,7 @@ export default function Projects2() {
             ref={(e) => {
               textRef.current[0] = e;
             }}
-            className="xl:text-9xl text-7xl xl:text-left text-center"
+            className="xl:text-9xl text-7xl xl:text-left text-center xl:translate-x-[-5%]"
           >
             Projects
           </h2>
@@ -262,11 +263,13 @@ export default function Projects2() {
             ref={(e) => {
               textRef.current[1] = e;
             }}
-            className="text-xl font-thin xl:w-[50%] w-[80%] xl:text-left text-center"
+            className="text-xl font-thin xl:w-[80%] w-[80%] xl:text-left text-center"
           >
-            Apps, Websites, and other projects I have worked on. we do it all
+            Explore our diverse portfolio showcasing innovative solutions for a
+            variety of digital needs, from sleek fitness apps to dynamic life
+            coach websites.{" "}
           </p>
-          <Link
+          {/* <Link
             ref={(e) => {
               textRef.current[2] = e;
             }}
@@ -274,7 +277,10 @@ export default function Projects2() {
             className="  border-2 border-white hover:text-black hover:bg-white h-12 w-40 rounded-3xl mt-10 flex justify-center items-center"
           >
             Explore more
-          </Link>
+          </Link> */}
+          <button className="  border-2 border-white hover:text-black hover:bg-white h-12 w-max px-6 rounded-3xl mt-10 flex justify-center items-center">
+            Page Coming soon
+          </button>
         </div>
       </div>
     </section>

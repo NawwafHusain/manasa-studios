@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -107,6 +108,13 @@ export default function Nav2() {
       delay: 0.3,
     });
   };
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+  //مناس
 
   useEffect(() => {
     isOpened ? listAnimation() : null;
@@ -122,24 +130,26 @@ export default function Nav2() {
       >
         {" "}
         <div className="flex items-center justify-between w-full">
-          <Image
-            src={logo}
-            width={125}
-            height={66}
-            className="object-contain"
-            alt="Manasa Studios Logo white version"
-          />
-          <Image
-            src={menuButton}
-            width={40}
-            height={40}
-            className="object-contain xl:hidden"
-            alt="Manasa Studios Logo white version"
-            onClick={handleMenu}
-          />
+          <Link href="/">
+            <Image
+              src={logo}
+              width={125}
+              height={66}
+              className="object-contain"
+              alt="Manasa Studios Logo white version"
+            />
+            <Image
+              src={menuButton}
+              width={40}
+              height={40}
+              className="object-contain xl:hidden"
+              alt="Manasa Studios Logo white version"
+              onClick={handleMenu}
+            />
+          </Link>
           {/*desktop Menu */}
           <ul className={`xl:flex gap-2 hidden w-max `}>
-            <li
+            {/* <li
               className=" nav-button rounded-full flex justify-center items-center"
               onClick={() => scrollToSection("services")}
               ref={(e) => {
@@ -147,12 +157,12 @@ export default function Nav2() {
               }}
             >
               Services
-            </li>
+            </li> */}
             <li
               className=" nav-button rounded-full flex justify-center items-center"
               onClick={() => scrollToSection("projects")}
               ref={(e) => {
-                listItemRef.current[1] = e;
+                listItemRef.current[0] = e;
               }}
             >
               Projects
@@ -161,7 +171,7 @@ export default function Nav2() {
               className=" nav-button rounded-full flex justify-center items-center"
               onClick={() => scrollToSection("methadology")}
               ref={(e) => {
-                listItemRef.current[2] = e;
+                listItemRef.current[1] = e;
               }}
             >
               Methodology
@@ -170,7 +180,7 @@ export default function Nav2() {
               className=" nav-button rounded-full flex justify-center items-center"
               onClick={() => scrollToSection("contact")}
               ref={(e) => {
-                listItemRef.current[3] = e;
+                listItemRef.current[2] = e;
               }}
             >
               Contact

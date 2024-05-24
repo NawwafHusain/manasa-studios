@@ -82,7 +82,7 @@ export default function Contact() {
           <Image
             src={"/images/3dBlobsRot.png"}
             fill
-            className="object-cover "
+            className="object-cover opacity-70"
             alt="3d blobs"
           />
         </div>
