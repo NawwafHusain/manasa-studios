@@ -40,7 +40,7 @@ export default function Home() {
  />
 </section>`;
   return (
-    <main className=" overflow-x-clip w-full ">
+    <main className=" overflow-x-clip w-[100vw] ">
       <Hero />
       <Suspense fallback={transform}>
         <Transform />

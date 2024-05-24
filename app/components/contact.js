@@ -77,7 +77,7 @@ export default function Contact() {
       className=" px-4 lg:px-16 relative overflow-x-clip xl:h-min mt-40 flex justify-center items-center"
       id="contact"
     >
-      <div className="w-full lg:h-[50rem] h-[30rem] cards rounded-3xl flex justify-center flex-col items-center lg:gap-8 gap-2 relative ">
+      <div className="w-full lg:h-[50rem] h-[70vh] cards rounded-3xl flex justify-center flex-col items-center lg:gap-8 gap-2 relative ">
         <div className="absolute w-full h-full top-0 left-0 overflow-clip rounded-3xl">
           <Image
             src={"/images/3dBlobsRot.png"}
