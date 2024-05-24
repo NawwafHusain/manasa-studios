@@ -2,6 +2,7 @@ import React from "react";
 import BackToTop from "./BackToTop";
 import Image from "next/image";
 import Link from "next/link";
+import NewsLetterInput from "./NewsLetterInput";
 
 export default function Footer() {
   return (
@@ -19,12 +20,20 @@ export default function Footer() {
           </h3>
           <p className="text-lg text-white font-thin">
             With every line of code and pixel-perfect design, we aim to push the
-            boundaries of what's possible, setting new standards for digital
-            presence and connectivity
+            boundaries of what&apos;s possible, setting new standards for
+            digital presence and connectivity
           </p>
         </div>
       </div>
-      <div className="foot-cards w-full h-full rounded-[2rem]  cols-start-2 col-span-4 row-span-1 row-start-1 flex justify-center items-center"></div>
+      <div className="foot-cards w-full h-full rounded-[2rem]  cols-start-2 col-span-4 row-span-1 row-start-1 flex flex-col justify-center items-start">
+        <h3 className="text-3xl text-white">Subscribe to our newsletter</h3>
+        <p className="text-white font-thin text-lg">
+          {" "}
+          Stay upto date with all our offers, emerging trends and new tools in
+          the market!
+        </p>
+        <NewsLetterInput />
+      </div>
       <div className="foot-cards w-full h-full rounded-[2rem]  cols-start-3 col-span-1 row-span-1 row-start-2 flex justify-center items-center">
         <a href={"https://www.instagram.com/manasa.studios/"} target="_blank">
           {" "}
@@ -45,7 +54,7 @@ export default function Footer() {
       <div className="foot-cards w-full h-full rounded-[2rem]  cols-start-6 col-span-1 row-span-2 row-start-1  flex flex-col items-start justify-center ">
         <h4 className="text-lg text-white mb-4">Quick Links</h4>
         <ul className="text-gray-400 w-full gap-2 flex flex-col">
-          <li className="hover:text-white"> Faq</li>
+          <li className="hover:text-white"> FAQ</li>
           <li className="hover:text-white"> Privacy Policy</li>
           <li className="hover:text-white">Cookie Policy</li>
           <li className="hover:text-white"> Site Map</li>

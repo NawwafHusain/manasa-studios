@@ -264,9 +264,7 @@ export default function Projects2() {
             }}
             className="text-xl font-thin xl:w-[50%] w-[80%] xl:text-left text-center"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            efficitur, lorem eu gravida efficitur, nisl ante efficitur quam,
-            quis
+            Apps, Websites, and other projects I have worked on. we do it all
           </p>
           <Link
             ref={(e) => {
