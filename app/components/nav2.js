@@ -129,7 +129,7 @@ export default function Nav2() {
         ref={navRef}
       >
         {" "}
-        <div className="flex items-center justify-between w-full">
+        <div className="flex items-center justify-between w-[100%]">
           <Link href="/">
             <Image
               src={logo}
@@ -138,6 +138,8 @@ export default function Nav2() {
               className="object-contain"
               alt="Manasa Studios Logo white version"
             />
+          </Link>
+          <Link href="/">
             <Image
               src={menuButton}
               width={40}
