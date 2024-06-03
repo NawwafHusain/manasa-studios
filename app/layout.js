@@ -31,14 +31,17 @@ export default function RootLayout({ children }) {
           src="https://www.googletagmanager.com/gtag/js?id=G-E7NY2W59JZ"
         />
 
-        <Script id="google-analytics">
-          {`
+        <Script
+          id="google-analytics"
+          dangerouslySetInnerHTML={{
+            __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', ${"${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}"});
-          `}
-        </Script>
+          `,
+          }}
+        ></Script>
       </head>
       <body
         className={`${josefin_Sans.className} relative h-max grid grid-cols-1 justify-items-center w-screen overflow-x-clip`}
