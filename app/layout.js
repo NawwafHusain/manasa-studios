@@ -6,13 +6,13 @@ import { Toaster } from "react-hot-toast";
 import Mousefollow from "./components/MouseFollow";
 import Footer from "./components/footer";
 import { Analytics } from "@vercel/analytics/react";
-import { GoogleAnalytics } from "nextjs-google-analytics";
-
+import Script from "next/script";
 const josefin_Sans = Josefin_Sans({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Manasa Studios",
-  description: "Bringing you brands to life through design and code",
+  description:
+    "Bringing you brands to life through design and code. Manasa Studios is a digital agency that specializes in web design and development.",
 };
 
 export default function RootLayout({ children }) {
@@ -24,13 +24,24 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/images/LogoBlack.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content={metadata.description} />
-        <meta name="name" content="manasa studios" />
+        <meta name="name" content="Manasa Studios" />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-E7NY2W59JZ"
+        />
+
+        <Script id="google-analytics">
+          {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', ${"${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}"});
+          `}
+        </Script>
       </head>
       <body
         className={`${josefin_Sans.className} relative h-max grid grid-cols-1 justify-items-center w-screen overflow-x-clip`}
       >
-        <GoogleAnalytics trackPageViews />
-
         <Toaster
           position="top-center"
           toastOptions={{
