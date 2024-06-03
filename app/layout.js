@@ -5,6 +5,8 @@ import Nav2 from "./components/nav2";
 import { Toaster } from "react-hot-toast";
 import Mousefollow from "./components/MouseFollow";
 import Footer from "./components/footer";
+import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/react";
 
 const josefin_Sans = Josefin_Sans({ subsets: ["latin"] });
 
@@ -46,6 +48,7 @@ export default function RootLayout({ children }) {
           <Footer />
         </container>
         <Mousefollow />
+        <Analytics />
       </body>
     </html>
   );
