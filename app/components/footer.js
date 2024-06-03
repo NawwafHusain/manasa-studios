@@ -7,7 +7,7 @@ import NewsLetterInput from "./NewsLetterInput";
 export default function Footer() {
   return (
     <footer className="w-[100vw] h-[100vh] xl:h-[50vh] min-h-max px-4 grid xl:grid-cols-[35%_9%_9%_9%_14%_20%] grid-cols-[40%_60%] xl:grid-rows-[70%_30%] grid-rows-[30%_16.6%_16.6%_16.6%_20%] xl:gap-4 gap-2 relative mb-10 xl:px-16 md:px-4 mt-4 justify-items-center items-center">
-      <div className="foot-cards w-full h-full rounded-[2rem]  xl:cols-start-1 xl:col-span-1 xl:row-span-2 xl:row-start-1 cols-start-1 col-span-2 row-span-1 row-start-1 flex flex-col justify-between items-start">
+      <div className="foot-cards w-full h-max rounded-[2rem]  xl:cols-start-1 xl:col-span-1 xl:row-span-2 xl:row-start-1 cols-start-1 col-span-2 row-span-1 row-start-1 flex flex-col justify-between items-start">
         <Image
           src="/images/PrimaryWhite.png"
           width={300}
@@ -31,9 +31,11 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      <div className="foot-cards w-full h-full rounded-[2rem] min-h-max xl:cols-start-2 xl:col-span-4 xl:row-span-1 xl:row-start-1 cols-start-1 col-span-2 row-span-2 row-start-5 flex flex-col justify-center items-start">
-        <h3 className="text-[2vw] text-white">Subscribe to our newsletter</h3>
-        <p className="text-white font-thin text-[1.1vw]">
+      <div className="foot-cards w-full h-max rounded-[2rem] min-h-max xl:cols-start-2 xl:col-span-4 xl:row-span-1 xl:row-start-1 cols-start-1 col-span-2 row-span-2 row-start-5 flex flex-col justify-center items-start">
+        <h3 className="lg:text-[2vw] text-[4.5vw] text-white">
+          Subscribe to our newsletter
+        </h3>
+        <p className="text-white font-thin lg:text-[1.1vw] text-[4vw]">
           {" "}
           Stay upto date with all our offers, emerging trends and new tools in
           the market!
