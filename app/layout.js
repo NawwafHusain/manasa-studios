@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast";
 import Mousefollow from "./components/MouseFollow";
 import Footer from "./components/footer";
 import { Analytics } from "@vercel/analytics/react";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 const josefin_Sans = Josefin_Sans({ subsets: ["latin"] });
 
@@ -28,6 +29,8 @@ export default function RootLayout({ children }) {
       <body
         className={`${josefin_Sans.className} relative h-max grid grid-cols-1 justify-items-center w-screen overflow-x-clip`}
       >
+        <GoogleAnalytics trackPageViews />
+
         <Toaster
           position="top-center"
           toastOptions={{
