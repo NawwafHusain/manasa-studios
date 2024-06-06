@@ -7,6 +7,8 @@ import Mousefollow from "./components/MouseFollow";
 import Footer from "./components/footer";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 import Script from "next/script";
 const josefin_Sans = Josefin_Sans({ subsets: ["latin"] });
 
@@ -27,9 +29,9 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
         <meta name="name" content="Manasa Studios" />
       </head>
-      <Script
+      {/* <Script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=G-E7NY2W59JZ"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
       />
 
       <Script
@@ -39,10 +41,13 @@ export default function RootLayout({ children }) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', ${"${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}"});
+              gtag('config', ${process.env.GOOGLE_ANALYTICS});
+              console.log('Google Analytics loaded')
+              console.log('Google Analytics loaded')
           `,
         }}
-      ></Script>
+      ></Script> */}
+      <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS} />
       <body
         className={`${josefin_Sans.className} relative h-max grid grid-cols-1 justify-items-center w-screen overflow-x-clip`}
       >
