@@ -25,6 +25,8 @@ async function sendEmail(data) {
     <p> Email: ${data.email} </p>`,
     };
     console.log(mailOptions, "inside sendEmail");
+
+    //sending mail to my self
     transporter.sendMail(mailOptions, function (error, info) {
       if (error) {
         console.log(error);
@@ -34,6 +36,8 @@ async function sendEmail(data) {
         resolve(info.response);
       }
     });
+
+    //TODO: send follow up email to client with calendly call link
   });
 }
 
