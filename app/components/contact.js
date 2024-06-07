@@ -38,19 +38,28 @@ export default function Contact() {
     setIsSubmitting(true);
     const formData = new FormData(e.target);
     const res = sendmail(formData);
-    console.log(res, "res");
+    //console.log(res, "res");
 
     toast
       .promise(res, {
         loading: "Sending...",
-        success: "Your message has been sent",
-        error: "Something went wrong, please try again later",
+        success: (data) => {
+          if (data.status === 200) {
+            return "Message sent successfully";
+          } else {
+            throw new Error(data);
+          }
+        },
+        error: (data) => {
+          console.log(data);
+          return `Something went wrong, please try again later or contact us as communications@manasastudios.com`;
+        },
       })
-      .then((success) => {
+      .then((success, error) => {
         if (success) {
           formRef.current.reset();
         } else {
-          console.log("error");
+          console.log("error", error``);
         }
       });
 

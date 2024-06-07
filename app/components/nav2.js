@@ -172,7 +172,7 @@ export default function Nav2() {
             </li>
             <li
               className=" nav-button rounded-full flex justify-center items-center"
-              onClick={() => scrollToSection("methadology")}
+              onClick={() => scrollToSection("methodology")}
               ref={(e) => {
                 listItemRef.current[1] = e;
               }}
@@ -196,12 +196,12 @@ export default function Nav2() {
             isOpened ? "h-full" : "h-0"
           } transition-all duration-500`}
         >
-          <li
+          {/* <li
             className=" list-item"
             onClick={() => scrollToSection("services")}
           >
             Services
-          </li>
+          </li> */}
           <li
             className=" list-item"
             onClick={() => scrollToSection("projects")}
@@ -212,7 +212,7 @@ export default function Nav2() {
             className=" list-item"
             onClick={() => scrollToSection("methadology")}
           >
-            Methadology
+            Methodology
           </li>
           <li className=" list-item" onClick={() => scrollToSection("contact")}>
             Contact

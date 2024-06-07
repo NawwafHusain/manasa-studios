@@ -247,14 +247,14 @@ export default function Method() {
                 className="absolute -right-40 scale-150 -z-10 opacity-60"
               />
             </div>
-            <h2 className={"text-2xl mb-5"}>Second Draft Developement</h2>
+            <h2 className={"text-2xl mb-5"}>Final Delivery and Deployment</h2>
             <p className={"text-sm w-[90%] font-light"}>
-              Building upon the first draft, the second phase of development
-              focuses on refining features, optimizing user interfaces, and
-              ensuring responsiveness across all devices. At this stage, we
-              incorporate initial feedback to enhance functionality and user
-              interaction, getting closer to the polished version of your
-              digital product.
+              The final stretch involves rigorous testing, quality assurance,
+              and preparing the deployment strategy. Upon final approval, we
+              launch your website or application, ensuring it&apos;s fully
+              optimized for performance and SEO. Post-launch, we continue to
+              offer support and maintenance to guarantee the longevity and
+              success of your project.
             </p>
             <p className="absolute bottom-5 right-5 text-md">5</p>
             <svg
@@ -291,14 +291,14 @@ export default function Method() {
                 className="absolute -left-20 -bottom-20 scale-[1.25] -z-10 opacity-60"
               />
             </div>
-            <h2 className={"text-2xl mb-5"}>Final Delivery and Deployment</h2>
+            <h2 className={"text-2xl mb-5"}>Second Draft Development</h2>
             <p className={"text-sm w-[90%] font-light"}>
-              The final stretch involves rigorous testing, quality assurance,
-              and preparing the deployment strategy. Upon final approval, we
-              launch your website or application, ensuring it&apos;s fully
-              optimized for performance and SEO. Post-launch, we continue to
-              offer support and maintenance to guarantee the longevity and
-              success of your project.
+              Building upon the first draft, the second phase of development
+              focuses on refining features, optimizing user interfaces, and
+              ensuring responsiveness across all devices. At this stage, we
+              incorporate initial feedback to enhance functionality and user
+              interaction, getting closer to the polished version of your
+              digital product.
             </p>
             <p className="absolute bottom-5 right-5 text-md">4</p>
           </div>
@@ -419,14 +419,13 @@ export default function Method() {
               className="absolute -right-40 scale-150 -z-10 opacity-60"
             />
           </div>
-          <h2 className={"text-2xl mb-5"}>Second Draft Developement</h2>
+          <h2 className={"text-2xl mb-5"}>Final Delivery and Deployment</h2>
           <p className={"text-sm w-[90%] font-light"}>
-            Building upon the first draft, the second phase of development
-            focuses on refining features, optimizing user interfaces, and
-            ensuring responsiveness across all devices. At this stage, we
-            incorporate initial feedback to enhance functionality and user
-            interaction, getting closer to the polished version of your digital
-            product.
+            The final stretch involves rigorous testing, quality assurance, and
+            preparing the deployment strategy. Upon final approval, we launch
+            your website or application, ensuring it&apos;s fully optimized for
+            performance and SEO. Post-launch, we continue to offer support and
+            maintenance to guarantee the longevity and success of your project.
           </p>
           <p className="absolute bottom-5 right-5 text-md">5</p>
         </div>
@@ -451,13 +450,15 @@ export default function Method() {
               className="absolute -left-20 -bottom-20 scale-[1.25] -z-10 opacity-60"
             />
           </div>
-          <h2 className={"text-2xl mb-5"}>Final Delivery and Deployment</h2>
+          <h2 className={"text-2xl mb-5"}>Second Draft Developement</h2>
           <p className={"text-sm w-[90%] font-light"}>
-            The final stretch involves rigorous testing, quality assurance, and
-            preparing the deployment strategy. Upon final approval, we launch
-            your website or application, ensuring it&apos;s fully optimized for
-            performance and SEO. Post-launch, we continue to offer support and
-            maintenance to guarantee the longevity and success of your project.
+            {" "}
+            Building upon the first draft, the second phase of development
+            focuses on refining features, optimizing user interfaces, and
+            ensuring responsiveness across all devices. At this stage, we
+            incorporate initial feedback to enhance functionality and user
+            interaction, getting closer to the polished version of your digital
+            product.
           </p>
           <p className="absolute bottom-5 right-5 text-md">4</p>
         </div>
