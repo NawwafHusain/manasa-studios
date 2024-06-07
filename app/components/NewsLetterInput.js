@@ -7,9 +7,9 @@ export default function NewsLetterInput() {
       <input
         type="email"
         placeholder="Example@mail.com"
-        className="w-full h-12 rounded-full pl-5"
+        className="w-full lg:h-[5vh] h-[6vh]  rounded-full pl-5"
       />
-      <button className=" px-10 py-2 mt-4  bg-primary text-white border-2 border-white rounded-full ">
+      <button className=" px-10 lg:py-[1vh] py-[1vh] lg:mt-4 mt-2 bg-primary text-white border-2 border-white rounded-full ">
         Subscribe
       </button>
     </form>
