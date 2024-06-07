@@ -112,6 +112,7 @@ export default function Nav2() {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
+      setIsOpened(false);
     }
   };
   //مناس
