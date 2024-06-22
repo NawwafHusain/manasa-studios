@@ -83,14 +83,14 @@ export default function Method() {
   return (
     <section
       className="lg:pt-40 pt-12 px-8 lg:px-16 relative xl:mt-16 overflow-x-clip mb-16 "
-      id="methadology"
+      id="methodology"
       ref={root}
     >
       <h1
         className="text-white lg:text-7xl text-6xl lg:text-left text-center lg:mb-24 mb-10 opacity-0 translate-x-[-20%]"
         ref={title}
       >
-        Methodolgy
+        Methodology
       </h1>
       <div className="flex-1 max-w-screen hidden lg:flex flex-wrap gap-20 justify-around mt-16 space-y-10 text-white">
         {/*Requirments */}
@@ -402,6 +402,40 @@ export default function Method() {
         {/*Second Draft */}
         <div
           ref={(e) => {
+            card2.current[4] = e;
+          }}
+          className="cards w-80 h-[22rem] rounded-3xl opacity-0 relative"
+        >
+          {" "}
+          <div
+            className={
+              "absolute w-full h-full rounded-3xl overflow-clip top-0 left-0"
+            }
+          >
+            <Image
+              src={"/images/stacked-cube.png"}
+              width={700}
+              height={700}
+              alt="abstract shape background"
+              className="absolute -left-20 -bottom-20 scale-[1.25] -z-10 opacity-60"
+            />
+          </div>
+          <h2 className={"text-2xl mb-5"}>Second Draft Development</h2>
+          <p className={"text-sm w-[90%] font-light"}>
+            {" "}
+            Building upon the first draft, the second phase of development
+            focuses on refining features, optimizing user interfaces, and
+            ensuring responsiveness across all devices. At this stage, we
+            incorporate initial feedback to enhance functionality and user
+            interaction, getting closer to the polished version of your digital
+            product.
+          </p>
+          <p className="absolute bottom-5 right-5 text-md">4</p>
+        </div>
+
+        {/*Final */}
+        <div
+          ref={(e) => {
             card2.current[3] = e;
           }}
           className="cards w-80 h-[22rem] rounded-3xl relative opacity-0"
@@ -428,39 +462,6 @@ export default function Method() {
             maintenance to guarantee the longevity and success of your project.
           </p>
           <p className="absolute bottom-5 right-5 text-md">5</p>
-        </div>
-        {/*Final */}
-        <div
-          ref={(e) => {
-            card2.current[4] = e;
-          }}
-          className="cards w-80 h-[22rem] rounded-3xl opacity-0 relative"
-        >
-          {" "}
-          <div
-            className={
-              "absolute w-full h-full rounded-3xl overflow-clip top-0 left-0"
-            }
-          >
-            <Image
-              src={"/images/stacked-cube.png"}
-              width={700}
-              height={700}
-              alt="abstract shape background"
-              className="absolute -left-20 -bottom-20 scale-[1.25] -z-10 opacity-60"
-            />
-          </div>
-          <h2 className={"text-2xl mb-5"}>Second Draft Developement</h2>
-          <p className={"text-sm w-[90%] font-light"}>
-            {" "}
-            Building upon the first draft, the second phase of development
-            focuses on refining features, optimizing user interfaces, and
-            ensuring responsiveness across all devices. At this stage, we
-            incorporate initial feedback to enhance functionality and user
-            interaction, getting closer to the polished version of your digital
-            product.
-          </p>
-          <p className="absolute bottom-5 right-5 text-md">4</p>
         </div>
       </div>
     </section>
